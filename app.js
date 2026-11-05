@@ -21,9 +21,9 @@
   const translations = {
     vi: {
       loaderOverline: 'KHỞI TẠO / HỒ SƠ CÁ NHÂN', loaderCaption: 'BẤT ĐỘNG SẢN / MARKETING / SÁNG TẠO', brandSmall: 'NEON PERSONAL PORTFOLIO',
-      navAbout: 'Giới thiệu', navExpertise: 'Năng lực', navJourney: 'Hành trình', navWorks: 'Lĩnh vực',
+      navAbout: 'Giới thiệu', navExpertise: 'Năng lực', navJourney: 'Hành trình', navWorks: 'Lĩnh vực', navProjects: 'Dự án',
       langToggle: 'NGÔN NGỮ', themeToggle: 'CHỦ ĐỀ', motionToggle: 'CHUYỂN ĐỘNG', contactBtn: 'LIÊN HỆ',
-      mobAbout: '01 / Giới thiệu', mobExpertise: '02 / Năng lực', mobJourney: '03 / Hành trình', mobWorks: '04 / Lĩnh vực', mobContact: '05 / Liên hệ',
+      mobAbout: '01 / Giới thiệu', mobExpertise: '02 / Năng lực', mobJourney: '03 / Hành trình', mobWorks: '05 / Lĩnh vực', mobContact: '06 / Liên hệ', mobProjects: '04 / Dự án',
       heroEyebrow: 'PORTFOLIO <b>/</b> MARKETING × REAL ESTATE', heroChapter: 'CINEMATIC CAREER / COLORFUL BRAND STORY.', heroIndex: '[ THƯƠNG HIỆU CÁ NHÂN / 2026 ]',
       heroBody: 'Tôi kết nối <em>tư duy kinh doanh</em>, <em>ngôn ngữ hình ảnh</em> và <em>trải nghiệm thương hiệu</em> để biến ý tưởng thành những hoạt động có giá trị thực tế.',
       heroCtaPrimary: 'KHÁM PHÁ HÀNH TRÌNH', heroCtaSecondary: 'Làm việc cùng tôi', heroVisualTag: 'KIẾN TRÚC / KHÔNG GIAN 3D',
@@ -48,22 +48,25 @@
       job4Title: 'Sales Admin / Trợ lý tổng hợp', job4Company: 'DKRV Đà Nẵng &amp; Bất động sản Tâm Phát', job4Desc: 'Hợp đồng đại lý – khách hàng, quản trị hồ sơ, chính sách kinh doanh, đối chiếu số liệu và hỗ trợ triển khai marketing.',
       job5Title: 'Sales &amp; Marketing', job5Company: 'Polaris Việt Nam', job5Desc: 'Tìm kiếm khách hàng, hỗ trợ đào tạo người dùng phần mềm, triển khai chương trình marketing và hoạt động marketing tổng hợp.',
       job6Title: 'Marshall', job6Company: 'Bà Nà Hills Golf Club', job6Desc: 'Giám sát hoạt động sân, xử lý tình huống phát sinh, hỗ trợ quản lý nhân sự trên sân và báo cáo hằng ngày.',
-      worksNo: '05 / NHÓM CÔNG VIỆC TIÊU BIỂU', worksTitle: 'Những lĩnh vực<br/><em>tôi từng thực hiện.</em>', worksDesc: 'Ba nhóm công việc tiêu biểu được tổng hợp từ hành trình nghề nghiệp. Hình minh họa mang tính concept, thể hiện tinh thần bất động sản, quy hoạch và thương hiệu.',
+
+      projectEyebrow: '05 / DỰ ÁN ĐÃ THỰC HIỆN', projectTitle: 'Dự án <em>thực tế.</em><br/>Dấu ấn <em>cá nhân.</em>', projectDescription: 'Thiết kế truyền thông bất động sản, nhiếp ảnh thương hiệu, sự kiện và những khoảnh khắc đời thường. Tuyển chọn từ bộ hình ảnh tôi cung cấp.',
+      projectAll: 'TẤT CẢ', projectDesign: 'THIẾT KẾ', projectPhotography: 'NHIẾP ẢNH', projectVideo: 'VIDEO', projectEmptyTitle: 'Chưa có nội dung trong danh mục', projectEmptyBody: 'Hãy chọn danh mục khác để xem các sản phẩm đã đăng.', projectBottomNote: 'Tư liệu thực tế từ bộ ảnh đã cung cấp · Nhấn vào ảnh để xem kích thước lớn.',
+      worksNo: '06 / NHÓM CÔNG VIỆC TIÊU BIỂU', worksTitle: 'Những lĩnh vực<br/><em>tôi từng thực hiện.</em>', worksDesc: 'Ba nhóm công việc tiêu biểu được tổng hợp từ hành trình nghề nghiệp. Hình minh họa mang tính concept, thể hiện tinh thần bất động sản, quy hoạch và thương hiệu.',
       work1Title: 'Truyền thông <em>bất động sản</em>', work1Desc: 'Phối hợp truyền thông, hình ảnh thương hiệu và kế hoạch tiếp cận thị trường trong lĩnh vực bất động sản.',
       work2Title: 'Kế hoạch &amp; <em>triển khai</em>', work2Desc: 'Từ chính sách kinh doanh, hồ sơ vận hành đến phối hợp triển khai giữa các bộ phận.',
       work3Title: 'Hình ảnh &amp; <em>trải nghiệm</em>', work3Desc: 'Thiết kế hình ảnh, sản xuất nội dung, xây dựng concept trang trí và hỗ trợ hình ảnh sự kiện.',
-      eduNo: '06 / NỀN TẢNG', eduTitle: 'Nền tảng.<br/><em>Động lực phát triển.</em>', eduDesc: 'Học tập về quản trị và tích lũy kinh nghiệm thực tế qua nhiều môi trường — một hành trình chú trọng sự thích nghi, chi tiết và phối hợp.',
+      eduNo: '07 / NỀN TẢNG', eduTitle: 'Nền tảng.<br/><em>Động lực phát triển.</em>', eduDesc: 'Học tập về quản trị và tích lũy kinh nghiệm thực tế qua nhiều môi trường — một hành trình chú trọng sự thích nghi, chi tiết và phối hợp.',
       eduSchool: 'Cao đẳng Thương mại', eduMajor: 'Quản trị Kinh doanh<br/>Dịch vụ &amp; Lữ hành', eduMode: 'HỆ CHÍNH QUY', eduDegree: 'CAO ĐẲNG ↗', eduSoftTitle: 'Đào tạo Kỹ năng mềm', eduSoftPlace: 'Cao đẳng Thương mại',
-      contactNo: '07 / HÃY KẾT NỐI', contactStatus: 'SẴN SÀNG KẾT NỐI', contactPretitle: 'CÓ MỘT Ý TƯỞNG ĐÁNG ĐỂ BẮT ĐẦU?', contactTitle: 'CÙNG TẠO RA<br/><em>ĐIỀU ĐÁNG NHỚ.</em>', contactEmail: 'GỬI EMAIL CHO TÔI', contactLocation: 'ĐỊA ĐIỂM / ĐÀ NẴNG, VIỆT NAM', backTop: 'LÊN ĐẦU TRANG ↑',
-      footerMid: 'THIẾT KẾ THEO CHẤT NEON / XÂY DỰNG BẰNG CODE', footerEnd: 'KẾT THÚC PORTFOLIO — 04',
+      contactNo: '08 / HÃY KẾT NỐI', contactStatus: 'SẴN SÀNG KẾT NỐI', contactPretitle: 'CÓ MỘT Ý TƯỞNG ĐÁNG ĐỂ BẮT ĐẦU?', contactTitle: 'CÙNG TẠO RA<br/><em>ĐIỀU ĐÁNG NHỚ.</em>', contactEmail: 'GỬI EMAIL CHO TÔI', contactLocation: 'ĐỊA ĐIỂM / ĐÀ NẴNG, VIỆT NAM', backTop: 'LÊN ĐẦU TRANG ↑',
+      footerMid: 'THIẾT KẾ THEO CHẤT NEON / XÂY DỰNG BẰNG CODE', footerEnd: 'KẾT THÚC PORTFOLIO — 05',
       introOverline: 'MỘT CHẶNG ĐƯỜNG. MỘT GÓC NHÌN.', introSubtitle: 'NGUYỄN ĐỨC TUYẾN', introTagline: 'REAL ESTATE  ×  BRAND THINKING  ×  CREATIVITY', introLoading: 'ĐANG MỞ CÂU CHUYỆN...', introSkip: 'BỎ QUA INTRO <span>↗</span>', replayIntro: 'XEM LẠI INTRO', downloadCV: 'TẢI CV (PDF)',
       motionOn: 'ON', motionOff: 'OFF', themeDark: 'DARK', themeLight: 'LIGHT'
     },
     en: {
       loaderOverline: 'INITIALIZING / PERSONAL PORTFOLIO', loaderCaption: 'REAL ESTATE / MARKETING / CREATIVITY', brandSmall: 'NEON PERSONAL PORTFOLIO',
-      navAbout: 'About', navExpertise: 'Expertise', navJourney: 'Journey', navWorks: 'Domains',
+      navAbout: 'About', navExpertise: 'Expertise', navJourney: 'Journey', navWorks: 'Domains', navProjects: 'Projects',
       langToggle: 'LANGUAGE', themeToggle: 'THEME', motionToggle: 'MOTION', contactBtn: 'CONTACT',
-      mobAbout: '01 / About', mobExpertise: '02 / Expertise', mobJourney: '03 / Journey', mobWorks: '04 / Domains', mobContact: '05 / Contact',
+      mobAbout: '01 / About', mobExpertise: '02 / Expertise', mobJourney: '03 / Journey', mobWorks: '05 / Domains', mobContact: '06 / Contact', mobProjects: '04 / Projects',
       heroEyebrow: 'PORTFOLIO <b>/</b> MARKETING × REAL ESTATE', heroChapter: 'CINEMATIC CAREER / COLORFUL BRAND STORY.', heroIndex: '[ PERSONAL BRAND / 2026 ]',
       heroBody: 'I connect <em>business thinking</em>, <em>visual language</em> and <em>brand experience</em> to turn ideas into practical and memorable actions.',
       heroCtaPrimary: 'EXPLORE THE JOURNEY', heroCtaSecondary: 'Work with me', heroVisualTag: 'ARCHITECTURE / 3D SPACE',
@@ -88,14 +91,17 @@
       job4Title: 'Sales Admin / General Assistant', job4Company: 'DKRV Danang &amp; Tam Phat Real Estate', job4Desc: 'Handled agency/client contracts, records, sales policies, data reconciliation and marketing support.',
       job5Title: 'Sales &amp; Marketing', job5Company: 'Polaris Vietnam', job5Desc: 'Found new clients, supported software-user training and implemented integrated marketing activities.',
       job6Title: 'Marshall', job6Company: 'Ba Na Hills Golf Club', job6Desc: 'Supervised golf course operations, handled on-site issues, supported staff coordination and made daily reports.',
-      worksNo: '05 / SELECTED WORK DOMAINS', worksTitle: 'Fields I have<br/><em>worked across.</em>', worksDesc: 'Three representative work clusters shaped by my career journey. The visuals are conceptual illustrations of property, planning and brand thinking.',
+
+      projectEyebrow: '05 / SELECTED REAL WORK', projectTitle: 'Real <em>projects.</em><br/>Personal <em>impact.</em>', projectDescription: 'Real-estate marketing graphics, brand photography, events and everyday moments. Selected visuals from the original portfolio archive.',
+      projectAll: 'ALL WORK', projectDesign: 'DESIGN', projectPhotography: 'PHOTOGRAPHY', projectVideo: 'VIDEO', projectEmptyTitle: 'No items in this category', projectEmptyBody: 'Choose another category to explore the published work.', projectBottomNote: 'Actual supplied photographs and graphics · Select any image to view full-size.',
+      worksNo: '06 / SELECTED WORK DOMAINS', worksTitle: 'Fields I have<br/><em>worked across.</em>', worksDesc: 'Three representative work clusters shaped by my career journey. The visuals are conceptual illustrations of property, planning and brand thinking.',
       work1Title: 'Real Estate <em>Communication</em>', work1Desc: 'Brand communication, market-facing visuals and strategic campaign support in the real estate sector.',
       work2Title: 'Planning &amp; <em>Execution</em>', work2Desc: 'From sales policies and operation documents to cross-team implementation.',
       work3Title: 'Visuals &amp; <em>Experience</em>', work3Desc: 'Visual design, content production, decoration concepts and event imaging support.',
-      eduNo: '06 / FOUNDATION', eduTitle: 'Foundation.<br/><em>Momentum for growth.</em>', eduDesc: 'A business-oriented education combined with hands-on experience across diverse environments — driven by adaptability, detail and collaboration.',
+      eduNo: '07 / FOUNDATION', eduTitle: 'Foundation.<br/><em>Momentum for growth.</em>', eduDesc: 'A business-oriented education combined with hands-on experience across diverse environments — driven by adaptability, detail and collaboration.',
       eduSchool: 'College of Commerce', eduMajor: 'Business Administration<br/>Service &amp; Tourism', eduMode: 'FULL-TIME PROGRAM', eduDegree: 'COLLEGE DEGREE ↗', eduSoftTitle: 'Soft Skills Training', eduSoftPlace: 'College of Commerce',
-      contactNo: '07 / LET\'S CONNECT', contactStatus: 'OPEN TO CONNECT', contactPretitle: 'DO YOU HAVE AN IDEA WORTH STARTING?', contactTitle: 'LET\'S CREATE<br/><em>SOMETHING MEMORABLE.</em>', contactEmail: 'EMAIL ME', contactLocation: 'LOCATION / DA NANG, VIET NAM', backTop: 'BACK TO TOP ↑',
-      footerMid: 'DESIGNED IN NEON / BUILT WITH CODE', footerEnd: 'END OF PORTFOLIO — 04',
+      contactNo: '08 / LET\'S CONNECT', contactStatus: 'OPEN TO CONNECT', contactPretitle: 'DO YOU HAVE AN IDEA WORTH STARTING?', contactTitle: 'LET\'S CREATE<br/><em>SOMETHING MEMORABLE.</em>', contactEmail: 'EMAIL ME', contactLocation: 'LOCATION / DA NANG, VIET NAM', backTop: 'BACK TO TOP ↑',
+      footerMid: 'DESIGNED IN NEON / BUILT WITH CODE', footerEnd: 'END OF PORTFOLIO — 05',
       introOverline: 'ONE JOURNEY. ONE PERSPECTIVE.', introSubtitle: 'NGUYEN DUC TUYEN', introTagline: 'REAL ESTATE  ×  BRAND THINKING  ×  CREATIVITY', introLoading: 'OPENING THE STORY...', introSkip: 'SKIP INTRO <span>↗</span>', replayIntro: 'REPLAY INTRO', downloadCV: 'DOWNLOAD CV (PDF)',
       motionOn: 'ON', motionOff: 'OFF', themeDark: 'DARK', themeLight: 'LIGHT'
     }
@@ -139,6 +145,7 @@
     updateThemeUI();
     updateMotionUI();
     localStorage.setItem('ndt-lang', lang);
+    document.dispatchEvent(new CustomEvent('cv:language-change', { detail: { lang } }));
   };
 
   // Cinematic intro: 4.7s with accessible skip, replay and one-play-per-tab behavior.

@@ -275,3 +275,97 @@ body[data-theme="light"] .hero-chapter{color:var(--text)}
   .cinematic-intro{display:none!important}
   .intro-aurora,.intro-city,.intro-scanning,.intro-luminous-horizon,.intro-monogram,.intro-loading-bar i{animation:none!important}
 }
+
+/* ========================================================================
+   V5 / SELECTED REAL PROJECTS: a functional, bilingual gallery + lightbox
+   ======================================================================== */
+.projects-showcase{padding:128px 0 108px;overflow:hidden;background:radial-gradient(ellipse 70% 55% at 82% 4%,rgba(108,255,195,.075),transparent 72%),radial-gradient(ellipse 56% 50% at 8% 70%,rgba(255,104,203,.065),transparent 75%)}
+.projects-showcase:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;background-image:linear-gradient(rgba(91,240,191,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(91,240,191,.035) 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(to bottom,transparent,#000 25%,#000 65%,transparent)}
+.projects-top{position:relative;display:grid;grid-template-columns:1fr 290px;gap:60px;align-items:center;margin-bottom:60px}
+.projects-top-copy{max-width:780px}
+.projects-eyebrow{display:flex;align-items:center;gap:12px;color:var(--mint);font:600 11px 'Space Grotesk','Be Vietnam Pro',sans-serif;letter-spacing:.2em;margin-bottom:25px}
+.projects-eyebrow-mark{font-size:21px;color:var(--gold);text-shadow:0 0 15px rgba(255,211,111,.55)}
+.projects-title{font-size:clamp(48px,5.5vw,82px);line-height:1.12;margin:0 0 25px}
+.projects-title em{color:var(--cyan);text-shadow:0 0 25px rgba(97,235,255,.24)}
+.projects-description{font-size:14px;line-height:1.95;color:var(--muted);max-width:645px;margin:0}
+.projects-side-art{height:250px;width:250px;display:grid;place-items:center;position:relative;justify-self:center;text-align:center;isolation:isolate}
+.projects-side-art:before{content:"";position:absolute;inset:30px;border-radius:50%;background:radial-gradient(circle,rgba(70,255,183,.15),rgba(97,235,255,.06),transparent 78%);filter:blur(13px)}
+.projects-side-art>span{z-index:1;font:700 22px/1.35 'Space Grotesk',sans-serif;letter-spacing:.12em;color:var(--ink);text-shadow:0 0 28px rgba(97,235,255,.24)}
+.project-orbit-star{display:block;color:var(--magenta);font-size:27px;margin-top:12px}
+.projects-orbit{position:absolute;inset:8px;border-radius:50%;border:1px solid rgba(97,235,255,.22);animation:spin 28s linear infinite}
+.projects-orbit:before{content:"";position:absolute;width:9px;height:9px;left:50%;top:-5px;border-radius:50%;background:var(--cyan);box-shadow:0 0 18px var(--cyan),0 0 29px var(--magenta)}
+.projects-orbit.two{inset:32px;border-style:dashed;border-color:rgba(255,104,203,.27);animation-duration:44s;animation-direction:reverse}
+.projects-toolbar{display:flex;align-items:center;justify-content:space-between;gap:22px;flex-wrap:wrap;margin-bottom:28px;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.projects-filter{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
+.filter-chip{border:1px solid rgba(143,255,208,.22);background:rgba(255,255,255,.028);color:var(--muted);font:600 11px 'Space Grotesk','Be Vietnam Pro',sans-serif;letter-spacing:.11em;border-radius:100px;min-height:43px;padding:12px 20px;cursor:pointer;transition:background .25s,border-color .25s,transform .25s,box-shadow .25s;color-scheme:inherit;backdrop-filter:blur(8px)}
+.filter-chip:hover{border-color:rgba(97,235,255,.6);transform:translateY(-2px);color:var(--ink)}
+.filter-chip.is-active{background:linear-gradient(100deg,rgba(100,255,195,.16),rgba(97,235,255,.10));border-color:rgba(143,255,208,.68);color:var(--ink);box-shadow:0 0 22px rgba(97,235,255,.11),inset 0 0 18px rgba(143,255,208,.06)}
+.projects-count{font:600 10px 'Space Grotesk','Be Vietnam Pro',sans-serif;letter-spacing:.2em;color:var(--muted)}
+.projects-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px;min-height:120px}
+.project-tile{grid-column:span 6;display:block;position:relative;border:1px solid rgba(150,255,214,.18);border-radius:23px;padding:0;text-align:left;cursor:pointer;min-width:0;height:368px;overflow:hidden;background:linear-gradient(130deg,#071c14,#102b23);box-shadow:0 18px 45px rgba(0,0,0,.19),inset 0 0 0 1px rgba(255,255,255,.02);transition:transform .6s var(--ease),border-color .5s,box-shadow .5s;isolation:isolate;animation:portfolioAppear .7s var(--ease) both}
+.project-tile-featured{grid-column:span 8;height:510px}
+.project-tile-followup{grid-column:span 4;height:510px}
+.project-tile:focus-visible{outline:2px solid var(--cyan);outline-offset:4px}
+.project-tile:hover{transform:translateY(-7px);border-color:rgba(143,255,208,.63);box-shadow:0 25px 52px rgba(0,0,0,.25),0 0 32px rgba(97,235,255,.11)}
+.project-tile-frame{display:block;position:relative;height:100%;width:100%;overflow:hidden}
+.project-tile-backdrop{position:absolute;inset:-22px;background-position:center;background-size:cover;filter:blur(28px) brightness(.40) saturate(1.2);opacity:.8;transform:scale(1.07)}
+.project-tile-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .9s var(--ease),filter .9s;filter:saturate(1.02)}
+.project-tile-design .project-tile-image{object-fit:contain;padding:18px 18px 73px;filter:drop-shadow(0 12px 30px rgba(0,0,0,.35))}
+.project-tile:hover .project-tile-image{transform:scale(1.045)}
+.project-tile-design:hover .project-tile-image{transform:scale(1.025)}
+.project-tile-shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(2,15,13,.94),rgba(2,15,13,.62) 19%,rgba(2,15,13,0) 56%),linear-gradient(180deg,rgba(2,15,13,.36),transparent 25%);pointer-events:none}
+.project-tile-number{position:absolute;top:21px;left:22px;font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.2em;color:#f6fffb;text-shadow:0 0 11px rgba(0,0,0,.8)}
+.project-tile-corner{position:absolute;top:19px;right:22px;display:grid;place-items:center;width:38px;height:38px;border-radius:50%;font-size:20px;color:#e9fff4;border:1px solid rgba(160,255,222,.42);background:rgba(2,30,22,.56);backdrop-filter:blur(8px);transition:background .3s,transform .3s}
+.project-tile:hover .project-tile-corner{background:rgba(89,236,190,.21);transform:rotate(45deg)}
+.project-tile-text{position:absolute;left:25px;bottom:25px;right:20px;display:flex;flex-direction:column;gap:10px;z-index:2;color:#fff}
+.project-tile-tag{font:600 10px 'Space Grotesk','Be Vietnam Pro',sans-serif;letter-spacing:.2em;color:#b5ffe2}
+.project-tile-title{font:700 clamp(20px,2vw,30px)/1.32 'Be Vietnam Pro',sans-serif;letter-spacing:-.035em;color:#fff;text-shadow:0 3px 13px rgba(0,0,0,.5)}
+.project-tile-subtitle{font:400 12px/1.7 'Be Vietnam Pro',sans-serif;color:#d1e6d9;max-width:520px}
+.project-tile-placeholder{display:grid;place-items:center;position:absolute;inset:0;color:var(--mint);font-size:56px;background:radial-gradient(circle,rgba(97,235,255,.14),transparent 45%)}
+.projects-empty{border:1px dashed rgba(143,255,208,.26);min-height:350px;border-radius:22px;background:radial-gradient(circle at 50% 25%,rgba(97,235,255,.07),transparent 45%),rgba(255,255,255,.02);padding:50px 24px;text-align:center;align-items:center;flex-direction:column;justify-content:center;gap:14px}
+.projects-empty:not([hidden]){display:flex}
+.projects-empty .empty-film{width:73px;height:73px;border-radius:50%;display:grid;place-items:center;background:rgba(143,255,208,.1);border:1px solid rgba(143,255,208,.27);color:var(--mint);font-size:25px;box-shadow:0 0 35px rgba(97,235,255,.1)}
+.projects-empty h3{font-size:23px;margin:0;color:var(--ink)}
+.projects-empty p{font-size:13px;line-height:1.9;color:var(--muted);max-width:550px;margin:0}
+.projects-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;border-top:1px solid var(--line);margin-top:27px;padding-top:22px}
+.projects-note{font-size:11px;line-height:1.8;color:var(--muted)}
+.projects-bottom-spark{color:var(--gold);font:600 11px 'Space Grotesk',sans-serif;letter-spacing:.14em;white-space:nowrap}
+.projects-noscript{font-size:12px;color:var(--muted)}
+@keyframes portfolioAppear{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}
+/* Full-size image and HTML5 / YouTube video lightbox */
+.projects-lightbox{border:1px solid rgba(143,255,208,.22);border-radius:21px;padding:0;max-width:min(1180px,calc(100vw - 36px));width:min(1180px,calc(100vw - 36px));max-height:min(92dvh,1000px);overflow:hidden;background:#07150f;color:#effff4;box-shadow:0 35px 110px rgba(0,0,0,.74),0 0 60px rgba(97,235,255,.10)}
+.projects-lightbox::backdrop{background:rgba(1,9,7,.84);backdrop-filter:blur(18px)}
+.lightbox-shell{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;max-height:90dvh}
+.lightbox-media{min-height:0;display:flex;justify-content:center;align-items:center;background:radial-gradient(circle at 50% 50%,rgba(97,235,255,.07),transparent 68%),#020908;overflow:hidden}
+.lightbox-photo{width:100%;height:auto;max-height:min(70dvh,760px);display:block;object-fit:contain}
+.lightbox-video{width:100%;max-height:65dvh;aspect-ratio:16/9;border:0;background:#000}
+.lightbox-unavailable{padding:60px 20px;color:#e7f5e9}
+.lightbox-info{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:22px 28px 25px;background:linear-gradient(100deg,rgba(15,37,27,.95),rgba(8,23,19,.95))}
+.lightbox-desc{max-width:810px}.lightbox-type{font:600 10px 'Space Grotesk',sans-serif;letter-spacing:.18em;color:#85eac4}.lightbox-desc h3{font-size:clamp(18px,2vw,24px);margin:8px 0;color:#f2fff6}.lightbox-desc p{font-size:12px;line-height:1.8;color:#bdd5c7;margin:0}
+.lightbox-controls{display:flex;align-items:center;gap:10px}.lightbox-controls span{font:600 11px 'Space Grotesk',sans-serif;letter-spacing:.16em;color:#cce8da;margin-right:9px;white-space:nowrap}
+.lightbox-controls button,.lightbox-close{width:42px;height:42px;border-radius:50%;background:rgba(143,255,208,.08);border:1px solid rgba(143,255,208,.29);color:#f0fff7;font-size:22px;cursor:pointer;transition:background .3s,transform .3s}
+.lightbox-controls button:not(:disabled):hover,.lightbox-close:hover{background:rgba(143,255,208,.2);transform:translateY(-2px)}
+.lightbox-controls button:disabled{opacity:.3;cursor:not-allowed}
+.lightbox-close{position:absolute;top:16px;right:16px;z-index:4;background:rgba(3,14,12,.7);backdrop-filter:blur(10px);font-size:16px}
+/* Dedicated light mode overrides: photo tiles retain dark gradient for legible captions */
+body[data-theme="light"] .projects-showcase{background:radial-gradient(ellipse 70% 55% at 82% 4%,rgba(18,171,104,.07),transparent 72%),radial-gradient(ellipse 56% 50% at 8% 70%,rgba(218,70,161,.07),transparent 75%)}
+body[data-theme="light"] .filter-chip{background:rgba(255,255,255,.54);border-color:rgba(12,116,81,.2);color:#456a59}
+body[data-theme="light"] .filter-chip.is-active{background:linear-gradient(100deg,rgba(10,211,141,.16),rgba(7,172,194,.11));color:#0d3726;border-color:rgba(10,155,112,.5)}
+body[data-theme="light"] .project-tile{box-shadow:0 15px 35px rgba(32,90,56,.13);border-color:rgba(7,172,194,.22)}
+body[data-theme="light"] .projects-lightbox{background:#07150f;color:#effff4}
+body[data-theme="light"] .projects-empty{background:rgba(255,255,255,.38)}
+@media(max-width:1170px){.projects-top{grid-template-columns:1fr 210px;gap:30px}.projects-side-art{width:210px;height:210px}.project-tile-title{font-size:23px}}
+@media(max-width:900px){.projects-showcase{padding:95px 0 75px}.projects-side-art{display:none}.projects-top{grid-template-columns:1fr}.project-tile-featured,.project-tile-followup,.project-tile{grid-column:span 6;height:360px}.project-tile-design .project-tile-image{padding-bottom:88px}.projects-title{font-size:clamp(40px,7vw,60px)}}
+@media(max-width:650px){.projects-showcase{padding:70px 0 58px}.projects-top{margin-bottom:28px}.projects-title{font-size:clamp(38px,9vw,54px)}.projects-description{font-size:12px}.projects-toolbar{margin-bottom:18px;padding-bottom:16px}.projects-filter{gap:7px}.filter-chip{font-size:9px;min-height:37px;padding:9px 13px}.projects-gallery{gap:15px}.project-tile,.project-tile-featured,.project-tile-followup{grid-column:1/-1;height:330px;border-radius:17px}.project-tile-featured{height:420px}.project-tile-text{bottom:18px;left:18px;right:18px;gap:8px}.project-tile-title{font-size:21px}.project-tile-subtitle{font-size:11px}.project-tile-tag{font-size:9px}.project-tile-number{left:17px;top:17px}.project-tile-corner{right:14px;top:14px}.lightbox-info{padding:16px;align-items:flex-start;flex-direction:column;gap:14px}.lightbox-desc h3{font-size:19px}.lightbox-desc p{font-size:11px}.lightbox-controls{justify-content:space-between;width:100%}.lightbox-photo{max-height:60dvh}.lightbox-shell{max-height:93dvh}.lightbox-close{top:10px;right:10px}.projects-note{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.projects-orbit{animation:none}.project-tile{animation:none}.project-tile:hover{transform:none}}
+body.motion-paused .projects-orbit{animation-play-state:paused}
+
+
+/* V5.1: playable YouTube card and direct-link fallback */
+.project-tile-video .project-tile-image{filter:saturate(1.06) brightness(.76)}
+.project-tile-video .project-tile-frame:after{content:"▶";pointer-events:none;position:absolute;z-index:2;left:50%;top:45%;transform:translate(-50%,-50%);display:grid;place-items:center;width:82px;height:82px;border-radius:50%;background:linear-gradient(140deg,rgba(7,35,27,.76),rgba(19,61,49,.62));border:1px solid rgba(145,255,219,.85);color:#e9fff7;font-size:30px;box-shadow:0 0 28px rgba(97,235,255,.26),0 0 65px rgba(255,104,203,.14);transition:transform .36s,box-shadow .36s}
+.project-tile-video:hover .project-tile-frame:after{transform:translate(-50%,-50%) scale(1.1);box-shadow:0 0 45px rgba(97,235,255,.37),0 0 65px rgba(255,104,203,.2)}
+.lightbox-youtube-link{display:inline-flex;align-items:center;gap:8px;margin-top:13px;padding:9px 15px;border-radius:40px;background:rgba(117,255,205,.075);border:1px solid rgba(126,255,212,.45);color:#c9ffeb;font-size:11px;font-weight:700;letter-spacing:.045em;text-decoration:none}
+.lightbox-youtube-link[hidden]{display:none!important}
+.lightbox-youtube-link:hover{background:rgba(117,255,205,.17);box-shadow:0 0 20px rgba(97,235,255,.1)}
+@media(max-width:650px){.project-tile-video .project-tile-frame:after{width:70px;height:70px;font-size:25px}.lightbox-youtube-link{margin-top:9px}}

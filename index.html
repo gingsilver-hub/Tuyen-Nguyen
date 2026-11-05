@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="styles.css" />
   <noscript><style>#intro-loader{display:none!important}</style></noscript>
   <script defer src="app.js"></script>
+  <script defer src="projects-data.js"></script>
+  <script defer src="portfolio.js"></script>
 </head>
 <body data-theme="dark" data-lang="vi">
   <div class="noise" aria-hidden="true"></div>
@@ -43,7 +45,7 @@
       <div class="intro-loading-bar" aria-hidden="true"><i></i></div>
     </div>
     <button class="intro-skip" type="button" id="intro-skip" data-i18n="introSkip" aria-label="Bỏ qua màn giới thiệu">BỎ QUA INTRO <span>↗</span></button>
-    <span class="intro-edition" aria-hidden="true">PRIVATE PORTFOLIO / EDITION 04 — 2026</span>
+    <span class="intro-edition" aria-hidden="true">CREATIVE PORTFOLIO / EDITION 05 — 2026</span>
   </div>
 
   <header class="site-header" id="site-header">
@@ -55,6 +57,7 @@
       <a href="#about" data-i18n="navAbout">Giới thiệu</a>
       <a href="#expertise" data-i18n="navExpertise">Năng lực</a>
       <a href="#journey" data-i18n="navJourney">Hành trình</a>
+      <a href="#projects" data-i18n="navProjects">Dự án</a>
       <a href="#works" data-i18n="navWorks">Lĩnh vực</a>
     </nav>
     <div class="header-actions">
@@ -80,8 +83,9 @@
       <a href="#about" data-i18n="mobAbout">01 / Giới thiệu</a>
       <a href="#expertise" data-i18n="mobExpertise">02 / Năng lực</a>
       <a href="#journey" data-i18n="mobJourney">03 / Hành trình</a>
-      <a href="#works" data-i18n="mobWorks">04 / Lĩnh vực</a>
-      <a href="#contact" data-i18n="mobContact">05 / Liên hệ</a>
+      <a href="#projects" data-i18n="mobProjects">04 / Dự án</a>
+      <a href="#works" data-i18n="mobWorks">05 / Lĩnh vực</a>
+      <a href="#contact" data-i18n="mobContact">06 / Liên hệ</a>
     </nav>
   </header>
 
@@ -202,16 +206,58 @@
       <article class="timeline-item reveal"><span class="timeline-dot"></span><div class="timeline-date">2017 — 2018</div><div class="timeline-detail"><span class="timeline-industry">SERVICE OPERATIONS / HOSPITALITY</span><h3 data-i18n="job6Title">Marshall</h3><p class="timeline-company" data-i18n="job6Company">Bà Nà Hills Golf Club</p><p data-i18n="job6Desc">Giám sát hoạt động sân, xử lý tình huống phát sinh, hỗ trợ quản lý nhân sự trên sân và báo cáo hằng ngày.</p></div><span class="timeline-arrow">↗</span></article>
     </div></div></section>
 
-    <section class="works section-shell" id="works" aria-labelledby="works-title"><div class="wrap"><div class="section-top reveal"><div><span class="section-no" data-i18n="worksNo">05 / SELECTED WORK DOMAINS</span><h2 class="section-heading" id="works-title" data-i18n="worksTitle">Những lĩnh vực<br/><em>tôi từng thực hiện.</em></h2></div><p data-i18n="worksDesc">Ba nhóm công việc tiêu biểu được tổng hợp từ hành trình nghề nghiệp. Hình minh họa mang tính concept, thể hiện tinh thần bất động sản, quy hoạch và thương hiệu.</p></div>
+
+    <!-- NEW V5: Real work gallery. Project data and bilingual captions are in projects-data.js. -->
+    <section class="projects-showcase section-shell" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <div class="projects-top reveal">
+          <div class="projects-top-copy">
+            <div class="projects-eyebrow"><span class="projects-eyebrow-mark">✳</span> <span data-i18n="projectEyebrow">HỒ SƠ HÌNH ẢNH / SELECTED WORKS</span></div>
+            <h2 class="section-heading projects-title" id="projects-title" data-i18n="projectTitle">Dự án <em>thực tế.</em><br/>Dấu ấn <em>cá nhân.</em></h2>
+            <p class="projects-description" data-i18n="projectDescription">Thiết kế truyền thông bất động sản, nhiếp ảnh thương hiệu, sự kiện và những khoảnh khắc đời thường. Bộ sưu tập trích từ hình ảnh tôi chia sẻ trong portfolio.</p>
+          </div>
+          <div class="projects-side-art" aria-hidden="true"><div class="projects-orbit one"></div><div class="projects-orbit two"></div><span>CREATIVE<br/>PORTFOLIO<span class="project-orbit-star">✦</span></span></div>
+        </div>
+        <div class="projects-toolbar reveal">
+          <div class="projects-filter" role="group" aria-label="Bộ lọc dự án / Project filters">
+            <button type="button" class="filter-chip is-active" data-project-filter="all" aria-pressed="true" data-i18n="projectAll">TẤT CẢ</button>
+            <button type="button" class="filter-chip" data-project-filter="design" aria-pressed="false" data-i18n="projectDesign">THIẾT KẾ</button>
+            <button type="button" class="filter-chip" data-project-filter="photography" aria-pressed="false" data-i18n="projectPhotography">NHIẾP ẢNH</button>
+            <button type="button" class="filter-chip" data-project-filter="video" aria-pressed="false" data-i18n="projectVideo">VIDEO</button>
+          </div>
+          <span class="projects-count" id="projects-count" aria-live="polite">07 / SẢN PHẨM TIÊU BIỂU</span>
+        </div>
+        <div class="projects-gallery" id="projects-gallery"></div>
+        <noscript><p class="projects-noscript">Bật JavaScript để xem gallery tương tác. / Enable JavaScript to view the interactive gallery.</p></noscript>
+        <div class="projects-empty" id="projects-empty" hidden>
+          <span class="empty-film" aria-hidden="true">▶</span>
+          <h3 data-i18n="projectEmptyTitle">Chưa có nội dung trong danh mục</h3>
+          <p data-i18n="projectEmptyBody">Hãy chọn danh mục khác để xem các sản phẩm đã đăng.</p>
+        </div>
+        <div class="projects-bottom reveal"><span class="projects-note" data-i18n="projectBottomNote">Tư liệu thiết kế và nhiếp ảnh từ bộ ảnh đã cung cấp · Nhấn vào ảnh để xem kích thước lớn.</span><span class="projects-bottom-spark" aria-hidden="true">✳ 2026</span></div>
+      </div>
+    </section>
+    <dialog class="projects-lightbox" id="project-lightbox" aria-labelledby="project-lightbox-title">
+      <div class="lightbox-shell">
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Đóng / Close">✕</button>
+        <div class="lightbox-media" id="lightbox-media"></div>
+        <div class="lightbox-info">
+          <div class="lightbox-desc"><span class="lightbox-type" id="lightbox-type"></span><h3 id="project-lightbox-title"></h3><p id="lightbox-caption"></p><a id="lightbox-youtube-link" class="lightbox-youtube-link" href="https://youtu.be/BUrITTULghs" target="_blank" rel="noopener noreferrer" hidden>↗ <span id="lightbox-youtube-label">Xem trên YouTube</span></a></div>
+          <div class="lightbox-controls"><span id="lightbox-counter">01 / 06</span><button id="lightbox-prev" type="button" aria-label="Ảnh trước / Previous">←</button><button id="lightbox-next" type="button" aria-label="Ảnh tiếp / Next">→</button></div>
+        </div>
+      </div>
+    </dialog>
+
+    <section class="works section-shell" id="works" aria-labelledby="works-title"><div class="wrap"><div class="section-top reveal"><div><span class="section-no" data-i18n="worksNo">06 / SELECTED WORK DOMAINS</span><h2 class="section-heading" id="works-title" data-i18n="worksTitle">Những lĩnh vực<br/><em>tôi từng thực hiện.</em></h2></div><p data-i18n="worksDesc">Ba nhóm công việc tiêu biểu được tổng hợp từ hành trình nghề nghiệp. Hình minh họa mang tính concept, thể hiện tinh thần bất động sản, quy hoạch và thương hiệu.</p></div>
       <div class="works-grid"><article class="work-card work-card-main reveal"><div class="work-art art-architecture"><img src="assets/real-estate.svg" alt="Minh họa kiến trúc bất động sản và truyền thông thương hiệu" loading="eager" /><span class="work-corner">[ 01 / PROPERTY ]</span></div><div class="work-copy"><span>01 — REAL ESTATE MARKETING</span><h3 data-i18n="work1Title">Truyền thông <em>bất động sản</em></h3><p data-i18n="work1Desc">Phối hợp truyền thông, hình ảnh thương hiệu và kế hoạch tiếp cận thị trường trong lĩnh vực bất động sản.</p></div></article>
       <article class="work-card reveal"><div class="work-art art-planning"><img src="assets/planning.svg" alt="Minh họa lưới bản vẽ và kế hoạch chiến lược" loading="eager" /><span class="work-corner">[ 02 / STRATEGY ]</span></div><div class="work-copy"><span>02 — PLANNING &amp; OPERATIONS</span><h3 data-i18n="work2Title">Kế hoạch &amp; <em>triển khai</em></h3><p data-i18n="work2Desc">Từ chính sách kinh doanh, hồ sơ vận hành đến phối hợp triển khai giữa các bộ phận.</p></div></article>
       <article class="work-card reveal"><div class="work-art art-brand"><img src="assets/brand-experience.svg" alt="Minh họa truyền thông thị giác và không gian sự kiện" loading="eager" /><span class="work-corner">[ 03 / EXPERIENCE ]</span></div><div class="work-copy"><span>03 — BRAND &amp; MEDIA</span><h3 data-i18n="work3Title">Hình ảnh &amp; <em>trải nghiệm</em></h3><p data-i18n="work3Desc">Thiết kế hình ảnh, sản xuất nội dung, xây dựng concept trang trí và hỗ trợ hình ảnh sự kiện.</p></div></article></div>
     </div></section>
 
-    <section class="education section-shell" id="education" aria-labelledby="education-title"><div class="wrap education-layout"><div class="education-head"><span class="section-no reveal" data-i18n="eduNo">06 / FOUNDATION</span><h2 class="section-heading reveal" id="education-title" data-i18n="eduTitle">Nền tảng.<br/><em>Động lực phát triển.</em></h2><p class="body-copy reveal" data-i18n="eduDesc">Học tập về quản trị và tích lũy kinh nghiệm thực tế qua nhiều môi trường — một hành trình chú trọng sự thích nghi, chi tiết và phối hợp.</p></div><div class="education-details"><div class="education-panel reveal"><span class="edu-time">2014 — 2017</span><span class="edu-name" data-i18n="eduSchool">Cao đẳng Thương mại</span><h3 data-i18n="eduMajor">Quản trị Kinh doanh<br/>Dịch vụ &amp; Lữ hành</h3><div class="edu-foot"><span data-i18n="eduMode">HỆ CHÍNH QUY</span><span data-i18n="eduDegree">CAO ĐẲNG ↗</span></div></div><div class="education-mini reveal"><span class="edu-time">2016 — 2017</span><div><h3 data-i18n="eduSoftTitle">Đào tạo Kỹ năng mềm</h3><p data-i18n="eduSoftPlace">Cao đẳng Thương mại</p></div><span class="edu-spark">✳</span></div></div></div></section>
+    <section class="education section-shell" id="education" aria-labelledby="education-title"><div class="wrap education-layout"><div class="education-head"><span class="section-no reveal" data-i18n="eduNo">07 / FOUNDATION</span><h2 class="section-heading reveal" id="education-title" data-i18n="eduTitle">Nền tảng.<br/><em>Động lực phát triển.</em></h2><p class="body-copy reveal" data-i18n="eduDesc">Học tập về quản trị và tích lũy kinh nghiệm thực tế qua nhiều môi trường — một hành trình chú trọng sự thích nghi, chi tiết và phối hợp.</p></div><div class="education-details"><div class="education-panel reveal"><span class="edu-time">2014 — 2017</span><span class="edu-name" data-i18n="eduSchool">Cao đẳng Thương mại</span><h3 data-i18n="eduMajor">Quản trị Kinh doanh<br/>Dịch vụ &amp; Lữ hành</h3><div class="edu-foot"><span data-i18n="eduMode">HỆ CHÍNH QUY</span><span data-i18n="eduDegree">CAO ĐẲNG ↗</span></div></div><div class="education-mini reveal"><span class="edu-time">2016 — 2017</span><div><h3 data-i18n="eduSoftTitle">Đào tạo Kỹ năng mềm</h3><p data-i18n="eduSoftPlace">Cao đẳng Thương mại</p></div><span class="edu-spark">✳</span></div></div></div></section>
 
-    <section class="contact section-shell" id="contact" aria-labelledby="contact-title"><div class="contact-radial" aria-hidden="true"></div><div class="wrap contact-inner"><div class="contact-meta reveal"><span class="section-no" data-i18n="contactNo">07 / LET'S CONNECT</span><span class="contact-status"><i></i> <span data-i18n="contactStatus">SẴN SÀNG KẾT NỐI</span></span></div><p class="contact-pretitle reveal" data-i18n="contactPretitle">CÓ MỘT Ý TƯỞNG ĐÁNG ĐỂ BẮT ĐẦU?</p><h2 class="contact-title reveal" id="contact-title" data-i18n="contactTitle">CÙNG TẠO RA<br/><em>ĐIỀU ĐÁNG NHỚ.</em></h2><div class="contact-actions reveal"><a href="mailto:Ging.silver@gmail.com?subject=Lien%20he%20hop%20tac%20-%20Nguyen%20Duc%20Tuyen" class="outline-button primary-button large-button"><span data-i18n="contactEmail">GỬI EMAIL CHO TÔI</span><span class="arrow">↗</span></a><a class="outline-button cv-download" data-pdf-download href="assets/Nguyen_Duc_Tuyen_CV_VI.pdf" download="Nguyen_Duc_Tuyen_CV_VI.pdf"><span class="download-icon" aria-hidden="true">↓</span><span data-i18n="downloadCV">TẢI CV (PDF)</span><span class="arrow">↗</span></a><a href="tel:+84983449411" class="plain-link">0983 449 411 <span>↗</span></a></div><div class="contact-bottom reveal"><span>EMAIL / <a href="mailto:Ging.silver@gmail.com">Ging.silver@gmail.com</a></span><span data-i18n="contactLocation">LOCATION / ĐÀ NẴNG, VIỆT NAM</span><a href="#top" data-i18n="backTop">BACK TO TOP ↑</a></div></div></section>
+    <section class="contact section-shell" id="contact" aria-labelledby="contact-title"><div class="contact-radial" aria-hidden="true"></div><div class="wrap contact-inner"><div class="contact-meta reveal"><span class="section-no" data-i18n="contactNo">08 / LET'S CONNECT</span><span class="contact-status"><i></i> <span data-i18n="contactStatus">SẴN SÀNG KẾT NỐI</span></span></div><p class="contact-pretitle reveal" data-i18n="contactPretitle">CÓ MỘT Ý TƯỞNG ĐÁNG ĐỂ BẮT ĐẦU?</p><h2 class="contact-title reveal" id="contact-title" data-i18n="contactTitle">CÙNG TẠO RA<br/><em>ĐIỀU ĐÁNG NHỚ.</em></h2><div class="contact-actions reveal"><a href="mailto:Ging.silver@gmail.com?subject=Lien%20he%20hop%20tac%20-%20Nguyen%20Duc%20Tuyen" class="outline-button primary-button large-button"><span data-i18n="contactEmail">GỬI EMAIL CHO TÔI</span><span class="arrow">↗</span></a><a class="outline-button cv-download" data-pdf-download href="assets/Nguyen_Duc_Tuyen_CV_VI.pdf" download="Nguyen_Duc_Tuyen_CV_VI.pdf"><span class="download-icon" aria-hidden="true">↓</span><span data-i18n="downloadCV">TẢI CV (PDF)</span><span class="arrow">↗</span></a><a href="tel:+84983449411" class="plain-link">0983 449 411 <span>↗</span></a></div><div class="contact-bottom reveal"><span>EMAIL / <a href="mailto:Ging.silver@gmail.com">Ging.silver@gmail.com</a></span><span data-i18n="contactLocation">LOCATION / ĐÀ NẴNG, VIỆT NAM</span><a href="#top" data-i18n="backTop">BACK TO TOP ↑</a></div></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap"><span>© <span id="year">2026</span> NGUYỄN ĐỨC TUYẾN</span><span data-i18n="footerMid">DESIGNED IN NEON / BUILT WITH CODE</span><span data-i18n="footerEnd">END OF PORTFOLIO — 04</span><button type="button" class="replay-intro" id="replay-intro"><span aria-hidden="true">↺</span> <span data-i18n="replayIntro">XEM LẠI INTRO</span></button></div></footer>
+  <footer class="site-footer"><div class="wrap"><span>© <span id="year">2026</span> NGUYỄN ĐỨC TUYẾN</span><span data-i18n="footerMid">DESIGNED IN NEON / BUILT WITH CODE</span><span data-i18n="footerEnd">END OF PORTFOLIO — 05</span><button type="button" class="replay-intro" id="replay-intro"><span aria-hidden="true">↺</span> <span data-i18n="replayIntro">XEM LẠI INTRO</span></button></div></footer>
 </body>
 </html>
