@@ -57,3 +57,66 @@ body.dawn-mode{--night:#302444;--soft:#fff0ee;--muted:#dfc4db;--border:#ffdae44f
 @media (max-width:420px){
   .journey-guide-card img{width:min(100%,230px)}
 }
+
+/* V7.1 — Skills section geometry fix (2026-11-10)
+   Root cause: the 1086×1448 character image was in normal document flow,
+   so it forced the CSS grid row to its natural image height. Anchor the
+   image inside a bounded artwork panel and preserve its natural aspect ratio. */
+.skills-stage {
+  grid-template-columns:minmax(0, .88fr) minmax(0, 1.12fr);
+  min-height:0;
+  align-items:stretch;
+}
+.skills-stage-art {
+  height:clamp(370px, 35vw, 460px);
+  min-height:0;
+  min-width:0;
+  overflow:hidden;
+  isolation:isolate;
+}
+.skills-stage-art::after {
+  content:"";
+  position:absolute;
+  inset:auto 7% 2% 7%;
+  height:25%;
+  background:radial-gradient(ellipse at 50% 100%, rgba(17,12,42,.34), transparent 65%);
+  pointer-events:none;
+  z-index:0;
+}
+.skills-stage-art .skills-crystal {display:none;}
+.skills-stage-art .skills-character {
+  position:absolute;
+  display:block;
+  box-sizing:border-box;
+  z-index:2;
+  inset:auto auto 0 50%;
+  width:calc(100% - 24px);
+  max-width:390px;
+  height:calc(100% - 24px);
+  max-height:100%;
+  object-fit:contain;
+  object-position:center bottom;
+  transform:translateX(-50%);
+  aspect-ratio:auto;
+  filter:drop-shadow(0 12px 22px rgba(20,12,40,.36));
+}
+.skills-stage-art .skills-art-tag {z-index:3;}
+.skills-stage-copy {min-width:0;}
+@media (max-width:700px) {
+  .skills-stage {grid-template-columns:minmax(0,1fr);}
+  .skills-stage-art {
+    height:320px;
+    min-height:0;
+    border-right:none;
+    border-bottom:1px solid #efd2ec28;
+  }
+  .skills-stage-art .skills-character {
+    width:min(100% - 24px, 350px);
+    max-width:350px;
+    height:calc(100% - 18px);
+  }
+}
+@media (max-width:420px) {
+  .skills-stage-art {height:285px;}
+  .skills-stage-art .skills-character {height:calc(100% - 16px);}
+}
