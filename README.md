@@ -5,7 +5,7 @@ Website portfolio tương tác dựa trên concept ảnh KAMUI và **nhân vật
 ## ✨ Có gì trong bản này?
 
 - Intro toàn màn hình (tự chuyển sau ~3 giây, có nút bỏ qua).
-- Màn hình mở đầu với núi, mái đình, cầu, ánh sáng, cánh hoa chuyển động và nhân vật được tách nền.
+- Màn hình mở đầu theo phong cảnh Cầu Rồng – Sơn Trà, Đà Nẵng, hiệu ứng cánh hoa và nhân vật tách nền.
 - 5 chương: **Câu chuyện → Hành trình làm việc → Kỹ năng → Showcase → Liên hệ**.
 - Hiệu ứng scroll reveal, parallax nhẹ, transition, tab công cụ, thẻ dự án mở popup chi tiết.
 - Chuyển ngôn ngữ **Việt / Anh** và chế độ **đêm / hoàng hôn**.
@@ -30,8 +30,9 @@ Muốn web chạy trực tiếp trên `https://username.github.io/`, đặt tên
 | Thông tin, kinh nghiệm, phần giới thiệu và liên hệ | `index.html` |
 | Bản dịch tiếng Anh, các nhóm công cụ, popup showcase | `script.js` |
 | Màu sắc, layout, hiệu ứng | `styles.css` |
-| Nhân vật tách nền | `assets/character-tuyen.webp` |
-| Phong cảnh và minh họa project | `assets/*.svg` |
+| Nhân vật theo từng section | `assets/character-hero.webp`, `character-about.webp`, `character-journey.webp`, `character-skills.webp`, `character-contact.webp` |
+| Background Đà Nẵng | `assets/bg-da-nang-hero.webp` |
+| Tư liệu dự án Vĩnh Trung Plaza | `assets/project-vtp-*.webp`, `assets/vtp-catalogue.pdf` |
 | Ảnh xem trước khi chia sẻ link | `assets/og-cover.png` |
 
 **Lưu ý:** Khi sửa thông tin tiếng Việt, cập nhật thêm bản tiếng Anh tương ứng trong `script.js`. Khi thay ảnh avatar, giữ tỉ lệ dọc, nền trong suốt, file WebP.
@@ -42,7 +43,9 @@ Muốn web chạy trực tiếp trên `https://username.github.io/`, đặt tên
 
 **Để tránh lộ dữ liệu cá nhân trên website công khai**, không đưa ngày sinh, địa chỉ nhà, lương, mã số thuế, thông tin người liên hệ khẩn cấp hoặc người tham chiếu vào mã nguồn.
 
-**Showcase:** 3 hình minh họa là concept SVG, không phải ảnh chụp dự án hoàn thành; nên thay bằng ảnh/tư liệu có quyền sử dụng khi bổ sung các case study thực tế.
+**Showcase:** 3 visual đầu tiên và gallery dùng tư liệu thực tế từ thư mục Project đã cung cấp. Video YouTube được nhúng từ `https://youtu.be/BUrITTULghs` và PDF brochure đi kèm.
+
+**Bản chỉnh sửa 10/11/2026:** Đã sửa lỗi section Kỹ năng & Công cụ bị kéo dài: khóa chiều cao khung minh họa, giữ đúng tỷ lệ ảnh nhân vật `object-fit: contain`, tương thích desktop, tablet và mobile. Nếu website đã đăng lên GitHub, có thể chỉ cần thay thế `styles.css` bằng file mới trong ZIP.
 
 ## Kỹ thuật / tương thích
 
