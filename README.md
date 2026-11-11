@@ -1,59 +1,62 @@
-# NGUYỄN ĐỨC TUYẾN — CINEMATIC PORTFOLIO
+# NGUYỄN ĐỨC TUYẾN — CINEMATIC PORTFOLIO V7.2
 
-Website portfolio tương tác dựa trên concept ảnh KAMUI và **nhân vật minh họa do người dùng cung cấp**.
+Website portfolio tương tác, tối ưu triển khai trực tiếp lên **GitHub Pages**.
 
-## ✨ Có gì trong bản này?
+## Nội dung website
 
-- Intro toàn màn hình (tự chuyển sau ~3 giây, có nút bỏ qua).
-- Màn hình mở đầu theo phong cảnh Cầu Rồng – Sơn Trà, Đà Nẵng, hiệu ứng cánh hoa và nhân vật tách nền.
-- 5 chương: **Câu chuyện → Hành trình làm việc → Kỹ năng → Showcase → Liên hệ**.
-- Hiệu ứng scroll reveal, parallax nhẹ, transition, tab công cụ, thẻ dự án mở popup chi tiết.
-- Chuyển ngôn ngữ **Việt / Anh** và chế độ **đêm / hoàng hôn**.
-- Responsive desktop / tablet / mobile, hỗ trợ `prefers-reduced-motion`.
-- Không dùng framework, không có bước build, không cần API key. Định dạng SVG + WebP nhẹ, phù hợp GitHub Pages.
+- Intro cinematic, background minh họa Cầu Rồng – Sơn Trà (Đà Nẵng).
+- Nhân vật hoạt hình với tạo hình phù hợp các chương: Intro, About, Journey, Skills, Contact.
+- Hành trình công tác, kỹ năng Creative / Marketing / AI, song ngữ Việt–Anh, dark/dawn mode.
+- Selected Work: ấn phẩm truyền thông và thiết kế dự án Vĩnh Trung Plaza.
+- Case study Vĩnh Trung Plaza với video YouTube, brochure PDF và thư viện ảnh.
+- Thiết kế responsive: thẻ dự án và gallery ảnh có thể vuốt ngang trên màn hình nhỏ.
 
-## 🚀 Đưa website lên GitHub Pages
+## Các thay đổi V7.2
 
-1. Giải nén thư mục ZIP. Giữ nguyên vị trí `index.html`, `styles.css`, `script.js`, `assets/`.
-2. Tạo **Public repository** trên GitHub, ví dụ `ductuyen-portfolio`.
-3. Chọn **Add file → Upload files** rồi tải **toàn bộ nội dung bên trong thư mục**, không phải chỉ tải ZIP.
-4. Chọn **Settings → Pages → Build and deployment → Deploy from a branch**.
-5. Chọn **Branch: main**, **Folder: /(root)** và **Save**.
-6. GitHub sẽ cung cấp địa chỉ tương tự `https://username.github.io/ductuyen-portfolio/`. Địa chỉ xuất hiện sau khi Pages triển khai thành công.
+- Rút gọn tiêu đề, chú thích; chỉnh lại văn phong trong toàn bộ phần showcase, popup dự án và ghi chú ở Journey / AI Skills.
+- Xóa các câu tường thuật quá trình xây dựng website, xóa các ô đếm số file và các đoạn chú thích nội bộ hiển thị công khai.
+- Tránh cắt mất chữ trên các poster (hiển thị trọn ảnh), tối ưu typography và khoảng cách trên điện thoại.
+- Giữ nguyên toàn bộ các hình ảnh, công cụ, video nhúng, đường dẫn brochure và tính năng cũ.
+- Đã kiểm tra không tràn ngang ở 320 / 390 / 768 / 1440 px, không có lỗi JavaScript ở các chức năng thử nghiệm chính.
 
-Muốn web chạy trực tiếp trên `https://username.github.io/`, đặt tên repository là `username.github.io`.
+## Cập nhật website đang chạy trên GitHub Pages
 
-## 🛠 Chỉnh nội dung
+Nếu đã đăng bản V7.1 và không thay đổi thư mục `assets/`, chỉ cần **thay 3 tệp** ở thư mục gốc repo:
 
-| Nội dung | Vị trí |
-|---|---|
-| Thông tin, kinh nghiệm, phần giới thiệu và liên hệ | `index.html` |
-| Bản dịch tiếng Anh, các nhóm công cụ, popup showcase | `script.js` |
-| Màu sắc, layout, hiệu ứng | `styles.css` |
-| Nhân vật theo từng section | `assets/character-hero.webp`, `character-about.webp`, `character-journey.webp`, `character-skills.webp`, `character-contact.webp` |
-| Background Đà Nẵng | `assets/bg-da-nang-hero.webp` |
-| Tư liệu dự án Vĩnh Trung Plaza | `assets/project-vtp-*.webp`, `assets/vtp-catalogue.pdf` |
-| Ảnh xem trước khi chia sẻ link | `assets/og-cover.png` |
+- `index.html`
+- `styles.css`
+- `script.js`
 
-**Lưu ý:** Khi sửa thông tin tiếng Việt, cập nhật thêm bản tiếng Anh tương ứng trong `script.js`. Khi thay ảnh avatar, giữ tỉ lệ dọc, nền trong suốt, file WebP.
+Bạn có thể tải ZIP patch chứa đúng ba file này, hoặc dùng ZIP đầy đủ.
 
-## 🔏 Nội dung CV đã xử lý
+Sau khi commit, chờ GitHub Pages hoàn tất triển khai và dùng **Ctrl+Shift+R** (Windows) để cập nhật bản mới từ trình duyệt.
 
-Đã chuyển 6 vị trí làm việc 2017–nay thành timeline; phần học vấn giữ đúng theo CV. Bổ sung nhóm kỹ năng theo yêu cầu: **Illustrator, Premiere Pro, After Effects, Google Flow, Google Colab**. Có thêm Photoshop theo ngữ cảnh làm việc thiết kế đã cung cấp.
+## Triển khai mới
 
-**Để tránh lộ dữ liệu cá nhân trên website công khai**, không đưa ngày sinh, địa chỉ nhà, lương, mã số thuế, thông tin người liên hệ khẩn cấp hoặc người tham chiếu vào mã nguồn.
+1. Giải nén, mở thư mục chứa `index.html`.
+2. Tạo repository **Public** trên GitHub.
+3. Tải **nội dung bên trong thư mục** lên gốc repository (không chỉ upload file ZIP).
+4. Vào **Settings → Pages → Build and deployment → Deploy from a branch**.
+5. Chọn nhánh `main`, thư mục `/(root)` và **Save**.
+6. Truy cập `https://USERNAME.github.io/REPOSITORY/` sau khi Pages triển khai thành công.
 
-**Showcase:** 3 visual đầu tiên và gallery dùng tư liệu thực tế từ thư mục Project đã cung cấp. Video YouTube được nhúng từ `https://youtu.be/BUrITTULghs` và PDF brochure đi kèm.
+Cấu trúc chính:
 
-**Bản chỉnh sửa 10/11/2026:** Đã sửa lỗi section Kỹ năng & Công cụ bị kéo dài: khóa chiều cao khung minh họa, giữ đúng tỷ lệ ảnh nhân vật `object-fit: contain`, tương thích desktop, tablet và mobile. Nếu website đã đăng lên GitHub, có thể chỉ cần thay thế `styles.css` bằng file mới trong ZIP.
+```text
+index.html
+styles.css
+script.js
+.nojekyll
+assets/
+    bg-da-nang-hero.webp
+    character-hero.webp
+    character-about.webp
+    character-journey.webp
+    character-skills.webp
+    character-contact.webp
+    project-vtp-*.webp
+    vtp-catalogue.pdf
+    ...
+```
 
-## Kỹ thuật / tương thích
-
-- HTML5, CSS3, JavaScript (ES2020+)
-- Cài đặt ngôn ngữ và theme được lưu trong `localStorage` nếu trình duyệt cho phép.
-- Hoạt động trên GitHub Pages khi repo đặt ở tên miền con (`/repo-name/`) do mọi asset đều dùng đường dẫn **tương đối**.
-- Google Fonts là phụ thuộc tùy chọn: không có mạng vẫn hiển thị bằng font dự phòng hệ thống.
-- Không có tracking, analytics, cookie quảng cáo hoặc backend.
-
----
-Artwork vectors created for this portfolio. Character artwork supplied by the user.
+Website dùng HTML/CSS/JavaScript thuần; không yêu cầu Node.js, npm hoặc API key. Video YouTube cần kết nối Internet khi xem. Google Fonts được lấy từ Internet; nếu không tải được sẽ dùng font dự phòng.

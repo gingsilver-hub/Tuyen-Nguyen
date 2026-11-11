@@ -1,198 +1,189 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#211934" />
-  <meta name="description" content="Portfolio của Nguyễn Đức Tuyến — Marketing, Creative Design và AI. Khám phá hành trình nghề nghiệp, kỹ năng và những câu chuyện sáng tạo." />
-  <meta name="author" content="Nguyễn Đức Tuyến" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Nguyễn Đức Tuyến | Marketing × Design × AI" />
-  <meta property="og:description" content="Cinematic interactive portfolio — Một hành trình kể chuyện bằng thiết kế, marketing và công nghệ." />
-  <meta property="og:image" content="assets/og-cover.png" />
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <script>document.documentElement.classList.add('js');</script>
-  <title>Nguyễn Đức Tuyến · Cinematic Portfolio</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#211934" name="theme-color"/>
+<meta content="Portfolio của Nguyễn Đức Tuyến — Marketing, Creative Design và AI. Khám phá hành trình nghề nghiệp, kỹ năng và những câu chuyện sáng tạo." name="description"/>
+<meta content="Nguyễn Đức Tuyến" name="author"/>
+<meta content="website" property="og:type"/>
+<meta content="Nguyễn Đức Tuyến | Marketing × Design × AI" property="og:title"/>
+<meta content="Cinematic interactive portfolio — Một hành trình kể chuyện bằng thiết kế, marketing và công nghệ." property="og:description"/>
+<meta content="assets/og-cover.png" property="og:image"/>
+<link href="assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;family=Outfit:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="styles.css" rel="stylesheet"/>
+<script>document.documentElement.classList.add('js');</script>
+<title>Nguyễn Đức Tuyến · Cinematic Portfolio</title>
 </head>
 <body>
-  <a class="skip-link" href="#story" data-i18n="skip">Bỏ qua phần giới thiệu</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="outer-sparkle s1" aria-hidden="true"></div><div class="outer-sparkle s2" aria-hidden="true"></div>
-  <div id="intro" class="intro" role="dialog" aria-modal="true" aria-label="Giới thiệu portfolio">
-    <div class="intro-orb orb-one" aria-hidden="true"></div><div class="intro-orb orb-two" aria-hidden="true"></div>
-    <div class="intro-content">
-      <div class="intro-emblem" aria-hidden="true">N<span>✦</span>T</div>
-      <p class="eyebrow intro-eyebrow" data-i18n="introEyebrow">MỘT HÀNH TRÌNH SÁNG TẠO</p>
-      <h1 class="intro-title" data-i18n="introTitle">Mỗi ý tưởng<br/>là một thế giới.</h1>
-      <p class="intro-desc" data-i18n="introDescription">Cùng tôi mở cánh cửa đến thế giới Marketing, Thiết kế &amp; AI.</p>
-      <button id="startExperience" class="primary-button intro-button" type="button"><span data-i18n="introStart">KHÁM PHÁ NGAY</span><span aria-hidden="true">↗</span></button>
-      <div class="loading-line" aria-hidden="true"><span></span></div>
-      <p class="intro-tip" data-i18n="introTip">Không cần chờ — nhấn để bắt đầu</p>
-    </div>
-    <div class="intro-bottom">NGUYỄN ĐỨC TUYẾN <span>EST. 1995 · DA NANG</span></div>
-  </div>
-
-  <div class="site-shell" id="top">
-    <header class="site-header" id="siteHeader">
-      <a class="brand" href="#top" aria-label="Về đầu trang"><span class="brand-symbol">N<span class="brand-star">✦</span>T</span><span class="brand-sub">CREATIVE<br/>PORTFOLIO</span></a>
-      <nav class="desktop-nav" aria-label="Điều hướng chính">
-        <a class="nav-link is-active" href="#story" data-i18n="navHome">TRANG CHỦ</a>
-        <a class="nav-link" href="#about" data-i18n="navAbout">CÂU CHUYỆN</a>
-        <a class="nav-link" href="#journey" data-i18n="navJourney">HÀNH TRÌNH</a>
-        <a class="nav-link" href="#skills" data-i18n="navSkills">KỸ NĂNG</a>
-        <a class="nav-link" href="#works" data-i18n="navWork">DỰ ÁN</a>
-      </nav>
-      <div class="nav-actions">
-        <button type="button" class="lang-toggle" id="langToggle" aria-label="Đổi ngôn ngữ" title="Tiếng Việt / English"><span id="currentLang">VI</span><span class="lang-divider">/</span><span id="otherLang">EN</span></button>
-        <button type="button" class="theme-button" id="themeToggle" aria-label="Chuyển chế độ màu" title="Bật / tắt giao diện ban đêm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4a8.5 8.5 0 1 0 11.4 11.4Z"/></svg></button>
-        <a class="nav-contact" href="#contact" data-i18n="navContact">KẾT NỐI <span aria-hidden="true">↗</span></a>
-        <button type="button" class="menu-toggle" id="menuToggle" aria-label="Mở menu" aria-expanded="false"><span></span><span></span></button>
-      </div>
-    </header>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Điều hướng điện thoại" hidden>
-      <a href="#story" data-i18n="navHome">TRANG CHỦ</a><a href="#about" data-i18n="navAbout">CÂU CHUYỆN</a><a href="#journey" data-i18n="navJourney">HÀNH TRÌNH</a><a href="#skills" data-i18n="navSkills">KỸ NĂNG</a><a href="#works" data-i18n="navWork">DỰ ÁN</a><a href="#contact" data-i18n="navContactShort">LIÊN HỆ</a>
-    </nav>
-
-    <!-- CHAPTER 00: illustration world / storytelling hero -->
-    <main>
-      <section class="hero section-anchor" id="story" aria-labelledby="heroTitle">
-        <div class="hero-scene" data-parallax=".08" aria-hidden="true"></div>
-        <div class="hero-mist" aria-hidden="true"></div>
-        <div class="stars stars-hero" aria-hidden="true"></div>
-        <div class="float-petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <div class="chapter-label"><span class="label-line"></span><span data-i18n="heroChapter">CHƯƠNG 00 / MỞ ĐẦU</span></div>
-            <p class="hero-sup" data-i18n="heroHello">XIN CHÀO, TÔI LÀ</p>
-            <h2 class="hero-title" id="heroTitle">NGUYỄN <br/><span>ĐỨC TUYẾN.</span></h2>
-            <div class="hero-identity" data-i18n="heroRole">MARKETING <span>×</span> CREATIVE DESIGN <span>×</span> AI</div>
-            <p class="hero-description" data-i18n="heroDescription">Tôi kết nối chiến lược với hình ảnh, câu chuyện với công nghệ — để mỗi thương hiệu có một dấu ấn riêng.</p>
-            <div class="hero-ctas"><a href="#about" class="primary-button"><span data-i18n="heroExplore">BẮT ĐẦU HÀNH TRÌNH</span><span aria-hidden="true">↗</span></a><a href="#works" class="text-button"><span data-i18n="heroView">XEM DỰ ÁN</span><span aria-hidden="true">→</span></a></div>
-          </div>
-          <div class="hero-character-wrap" data-parallax=".13">
-            <div class="character-glow" aria-hidden="true"></div>
-            <img class="hero-character" src="assets/character-hero.webp" fetchpriority="high" width="1086" height="1448" alt="Nhân vật minh họa Nguyễn Đức Tuyến ở tư thế chào đón, dẫn dắt phần mở đầu portfolio" />
-            <div class="speech-bubble hero-speech"><span class="bubble-star">✦</span><span data-i18n="heroSpeech">Chào mừng bạn đến với thế giới của tôi!</span></div>
-          </div>
-        </div>
-        <div class="hero-bottom"><span>DA NANG · VIETNAM <span class="dot-sep">◆</span> 2026</span><a href="#about" class="scroll-cue" aria-label="Cuộn xuống phần câu chuyện"><span data-i18n="scroll">CUỘN ĐỂ KHÁM PHÁ</span><span class="scroll-mouse" aria-hidden="true"></span></a><span class="hero-coordinate">16°03′N / 108°12′E</span></div>
-      </section>
-
-      <!-- CHAPTER 01: About -->
-      <section class="about-section chapter-section section-anchor" id="about" aria-labelledby="aboutTitle">
-        <div class="section-noise" aria-hidden="true"></div>
-        <div class="section-orb about-orb" aria-hidden="true"></div>
-        <div class="chapter-top reveal"><span>01 — THE STORY</span><span data-i18n="aboutKicker">TỪ Ý TƯỞNG ĐẾN DẤU ẤN</span></div>
-        <div class="about-layout">
-          <div class="about-main reveal">
-            <p class="section-kicker" data-i18n="aboutIntro">GẶP GỠ NGƯỜI KỂ CHUYỆN</p>
-            <h2 class="section-heading" id="aboutTitle" data-i18n="aboutTitle">Đằng sau mỗi<br/><em>ý tưởng hay</em><br/>là một câu chuyện.</h2>
-            <p class="body-large" data-i18n="aboutP1">Tôi là Nguyễn Đức Tuyến, chuyên viên Marketing tại Đà Nẵng. Hành trình của tôi bắt đầu từ dịch vụ, kinh doanh và bất động sản, trước khi tập trung vào xây dựng hình ảnh thương hiệu.</p>
-            <p class="body-muted" data-i18n="aboutP2">Tôi yêu việc biến những yêu cầu phức tạp thành trải nghiệm thị giác dễ hiểu: từ thiết kế truyền thông, nhiếp ảnh, concept sự kiện đến thử nghiệm công cụ AI để tối ưu quy trình sáng tạo.</p>
-            <div class="about-pills"><span data-i18n="aboutTag1">Tư duy chi tiết</span><span data-i18n="aboutTag2">Đa nhiệm</span><span data-i18n="aboutTag3">Sáng tạo thực tế</span></div>
-          </div>
-          <div class="about-art reveal" aria-label="Minh họa nhân vật và thế giới sáng tạo">
-            <div class="about-art-stars" aria-hidden="true"></div><div class="about-art-ring" aria-hidden="true"></div>
-            <img loading="lazy" src="assets/character-about.webp" width="1086" height="1448" alt="Nhân vật minh họa Nguyễn Đức Tuyến trong phần giới thiệu bản thân" />
-            <div class="speech-bubble about-speech"><span class="bubble-star">✦</span><span data-i18n="aboutSpeech">Tôi tin thiết kế đẹp phải đi cùng mục tiêu rõ ràng.</span></div>
-            <span class="about-art-corner">NDT / LVL 01</span>
-          </div>
-        </div>
-        <div class="metric-grid reveal" aria-label="Điểm nổi bật nghề nghiệp"><div><span class="metric-value">2017</span><span class="metric-desc" data-i18n="metric1">BẮT ĐẦU SỰ NGHIỆP</span></div><div><span class="metric-value">06</span><span class="metric-desc" data-i18n="metric2">CHẶNG ĐƯỜNG CÔNG TÁC</span></div><div><span class="metric-value">03</span><span class="metric-desc" data-i18n="metric3">MẢNG SÁNG TẠO CỐT LÕI</span></div></div>
-      </section>
-
-      <!-- CHAPTER 02: Work experience exactly from CV -->
-      <section class="journey-section chapter-section section-anchor" id="journey" aria-labelledby="journeyTitle">
-        <div class="journey-horizon" aria-hidden="true"></div>
-        <div class="chapter-top reveal"><span>02 — THE JOURNEY</span><span data-i18n="journeyTop">NHỮNG CHẶNG ĐƯỜNG ĐÃ QUA</span></div>
-        <div class="journey-heading-wrap reveal"><div><p class="section-kicker" data-i18n="journeyKicker">TỪ DỊCH VỤ ĐẾN SÁNG TẠO</p><h2 class="section-heading" id="journeyTitle" data-i18n="journeyTitle">Mỗi chặng đường,<br/><em>một kỹ năng mới.</em></h2></div><p class="journey-heading-note" data-i18n="journeyNote">Hành trình nghề nghiệp được tổng hợp từ CV — theo trình tự thời gian, từ những nền tảng đầu tiên đến công việc hiện tại.</p></div>
-        <div class="journey-guide reveal" aria-label="Nhân vật dẫn dắt hành trình sự nghiệp">
-          <div class="journey-guide-card">
-            <img loading="lazy" src="assets/character-journey.webp" width="1086" height="1448" alt="Nhân vật minh họa Nguyễn Đức Tuyến đang chỉ dẫn các cột mốc sự nghiệp" />
-            <div class="speech-bubble journey-speech"><span class="bubble-star">✦</span><span data-i18n="journeySpeech">Mỗi chặng đường đều góp phần tạo nên kỹ năng hôm nay.</span></div>
-          </div>
-        </div>
-        <div class="timeline">
-          <article class="timeline-item reveal"><div class="timeline-year">2017 <span>—</span> 2018</div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase1">CHẶNG 01 · DỊCH VỤ</span><h3>Bà Nà Hills Golf Club</h3><p class="role" data-i18n="job1Role">Marshall · Giám sát sân</p><p data-i18n="job1Desc">Giám sát hoạt động sân, giải quyết vấn đề phát sinh, quản lý công việc tại sân và báo cáo hằng ngày.</p></div></article>
-          <article class="timeline-item reveal"><div class="timeline-year">2018 <span>—</span> 2019</div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase2">CHẶNG 02 · CÔNG NGHỆ</span><h3>Polaris Việt Nam</h3><p class="role" data-i18n="job2Role">Sales &amp; Marketing · Hỗ trợ triển khai phần mềm</p><p data-i18n="job2Desc">Tìm kiếm khách hàng, đào tạo người dùng phần mềm và triển khai các chương trình marketing.</p></div></article>
-          <article class="timeline-item reveal"><div class="timeline-year">2019 <span>—</span> 01/2023</div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase3">CHẶNG 03 · BẤT ĐỘNG SẢN</span><h3>DKRV Đà Nẵng &amp; BĐS Tâm Phát</h3><p class="role" data-i18n="job3Role">Sales Admin · Trợ lý tổng hợp</p><p data-i18n="job3Desc">Quản trị hợp đồng, chính sách bán hàng, đối chiếu số liệu và phối hợp triển khai marketing đến đội ngũ kinh doanh.</p></div></article>
-          <article class="timeline-item reveal"><div class="timeline-year">02/2023 <span>—</span> 11/2023</div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase4">CHẶNG 04 · VẬN HÀNH</span><h3>Minh Trần Holdings</h3><p class="role" data-i18n="job4Role">Trợ lý Kinh doanh</p><p data-i18n="job4Desc">Thiết lập văn phòng mới, tuyển dụng, lập kế hoạch hoạt động phòng Kinh doanh và chăm sóc khách hàng.</p></div></article>
-          <article class="timeline-item reveal"><div class="timeline-year">12/2023 <span>—</span> 08/2024</div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase5">CHẶNG 05 · QUẢN TRỊ</span><h3>L.U.X Property Danang</h3><p class="role" data-i18n="job5Role">Trợ lý Ban Giám đốc</p><p data-i18n="job5Desc">Hỗ trợ hợp đồng, quản trị sổ sách, chính sách kinh doanh và phối hợp hoạt động marketing.</p></div></article>
-          <article class="timeline-item current reveal"><div class="timeline-year">09/2024 <span>—</span> <span data-i18n="now">NAY</span></div><div class="timeline-point" aria-hidden="true"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase6">CHẶNG 06 · THƯƠNG HIỆU</span><h3 data-i18n="companyDMC">Công ty Cổ phần Đức Mạnh</h3><p class="role" data-i18n="job6Role">Chuyên viên Marketing</p><p data-i18n="job6Desc">Chăm sóc kênh truyền thông, thiết kế hình ảnh thương hiệu, phát triển concept sự kiện, chụp ảnh và hậu kỳ phục vụ truyền thông.</p><span class="current-tag"><span class="pulse-dot"></span><span data-i18n="current">HIỆN TẠI</span></span></div></article>
-        </div>
-        <div class="education-strip reveal"><span class="education-icon" aria-hidden="true">✦</span><div><span class="education-label" data-i18n="educationLabel">NỀN TẢNG HỌC TẬP</span><strong data-i18n="educationSchool">Cao đẳng Thương mại · 2014–2017</strong><p data-i18n="educationDetail">Quản trị Kinh doanh Dịch vụ &amp; Lữ hành · Hệ chính quy</p></div><span class="education-end">EDUCATION / 01</span></div>
-      </section>
-
-      <!-- CHAPTER 03: skills -->
-      <section class="skills-section chapter-section section-anchor" id="skills" aria-labelledby="skillsTitle">
-        <div class="skill-shape one" aria-hidden="true"></div><div class="skill-shape two" aria-hidden="true"></div>
-        <div class="chapter-top reveal"><span>03 — THE TOOLKIT</span><span data-i18n="skillsTop">KỸ NĂNG &amp; CÔNG CỤ</span></div>
-        <div class="reveal"><p class="section-kicker" data-i18n="skillsKicker">CREATIVE TOOLKIT</p><h2 class="section-heading" id="skillsTitle" data-i18n="skillsTitle">Ý tưởng là điểm bắt đầu.<br/><em>Công cụ giúp hiện thực hóa.</em></h2><p class="skills-lead" data-i18n="skillsLead">Kết hợp nền tảng marketing, thiết kế nội dung và các công cụ sáng tạo mới. Chọn từng nhóm để khám phá.</p></div>
-        <div class="skill-tabs reveal" role="tablist" aria-label="Nhóm kỹ năng">
-          <button class="skill-tab is-active" id="tab-creative" role="tab" aria-controls="skill-panel" aria-selected="true" data-skill="creative"><span aria-hidden="true">✦</span> <span data-i18n="tabCreative">THIẾT KẾ &amp; MEDIA</span></button>
-          <button class="skill-tab" id="tab-ai" role="tab" aria-controls="skill-panel" aria-selected="false" data-skill="ai"><span aria-hidden="true">◇</span> <span data-i18n="tabAI">AI &amp; CÔNG NGHỆ</span></button>
-          <button class="skill-tab" id="tab-strategy" role="tab" aria-controls="skill-panel" aria-selected="false" data-skill="strategy"><span aria-hidden="true">◎</span> <span data-i18n="tabBusiness">MARKETING &amp; VẬN HÀNH</span></button>
-        </div>
-        <div class="skills-stage reveal" id="skill-panel" role="tabpanel" aria-labelledby="tab-creative">
-          <div class="skills-stage-art"><div class="skills-crystal" aria-hidden="true"><div class="crystal-core">✦</div><div class="crystal-ring ring-1"></div><div class="crystal-ring ring-2"></div></div><div class="skills-art-tag">NDT / TOOLBOX</div><img loading="lazy" class="skills-character" src="assets/character-skills.webp" width="1086" height="1448" alt="Nhân vật minh họa Nguyễn Đức Tuyến trong phần kỹ năng và công cụ" /></div>
-          <div class="skills-stage-copy"><span class="skills-stage-label" id="skillNumber">01 / CREATIVE</span><h3 id="skillHeading">Design &amp; Visual Storytelling</h3><p id="skillDescription">Từ ý tưởng đến hình ảnh truyền thông, video và trải nghiệm thương hiệu.</p><div class="tool-chips" id="skillChips"><span>Adobe Illustrator</span><span>Adobe Premiere Pro</span><span>Adobe After Effects</span><span>Adobe Photoshop</span><span>Photography</span><span>Visual Concept</span></div><div class="skills-footnote" id="skillFootnote">Thiết kế đồ họa · Hậu kỳ ảnh/video · Concept sáng tạo</div></div>
-        </div>
-      </section>
-
-      <!-- CHAPTER 04: portfolio domains, illustrative artwork not fabricated outcomes -->
-      <section class="works-section chapter-section section-anchor" id="works" aria-labelledby="worksTitle">
-        <div class="chapter-top reveal"><span>04 — SELECTED WORLDS</span><span data-i18n="worksTop">NHỮNG THẾ GIỚI TÔI TẠO DỰNG</span></div>
-        <div class="works-heading reveal"><div><p class="section-kicker" data-i18n="worksKicker">CREATIVE SHOWCASE</p><h2 class="section-heading" id="worksTitle" data-i18n="worksTitle">Một ý tưởng.<br/><em>Nhiều cách kể.</em></h2></div><p data-i18n="worksNote">Ba lĩnh vực công việc tiêu biểu, minh họa bằng đồ họa concept. Có thể thay thế bằng dự án và tư liệu thực tế bất cứ lúc nào.</p></div>
-        <div class="project-grid">
-          <article class="project-card reveal" tabindex="0"><div class="project-cover"><img loading="lazy" src="assets/project-vtp-cover.webp" alt="Poster truyền thông văn phòng cho thuê Vĩnh Trung Plaza"/><span class="project-id">WORLD / 001</span><span class="project-symbol" aria-hidden="true">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work1Type">OFFICE LEASING · KEY VISUAL</span><h3 data-i18n="work1Title">Vĩnh Trung Plaza</h3><p data-i18n="work1Desc">Ấn phẩm truyền thông quảng bá văn phòng cho thuê, nhấn mạnh view biển · núi · thành phố cùng diện tích 725 m².</p><div class="project-tags"><span data-i18n="tagDesign">Thiết kế</span><span>Marketing</span></div></div></article>
-          <article class="project-card reveal" tabindex="0"><div class="project-cover"><img loading="lazy" src="assets/project-vtp-connect.webp" alt="Visual lợi thế kết nối giao thông của Vĩnh Trung Plaza"/><span class="project-id">WORLD / 002</span><span class="project-symbol" aria-hidden="true">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work2Type">LOCATION · CONNECTIVITY</span><h3 data-i18n="work2Title">Di chuyển thuận tiện</h3><p data-i18n="work2Desc">Visual nhấn mạnh khoảng cách đến ga Đà Nẵng, sân bay quốc tế và biển Mỹ Khê — lợi thế cho doanh nghiệp và nhân sự.</p><div class="project-tags"><span>Location</span><span>Strategy</span></div></div></article>
-          <article class="project-card reveal" tabindex="0"><div class="project-cover"><img loading="lazy" src="assets/project-vtp-amenities.webp" alt="Visual hệ tiện ích nội khu tại Vĩnh Trung Plaza"/><span class="project-id">WORLD / 003</span><span class="project-symbol" aria-hidden="true">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work3Type">FACILITIES · LIFESTYLE</span><h3 data-i18n="work3Title">Tiện ích thương hạng</h3><p data-i18n="work3Desc">Tổng hợp các tiện ích nổi bật như GO!, Mr. D.I.Y., CGV, Elite Fitness và Pickleball Club để tăng sức hấp dẫn dự án.</p><div class="project-tags"><span>Branding</span><span>Content</span></div></div></article>
-        </div>
-        <p class="works-clarification reveal" data-i18n="worksDisclaimer">* Bên dưới là case study thực tế đã được bổ sung bằng video YouTube, brochure PDF và hình ảnh từ file dự án bạn cung cấp.</p>
-        <div class="featured-case reveal">
-          <div class="featured-case-copy">
-            <p class="section-kicker" data-i18n="featuredKicker">FEATURED CASE STUDY</p>
-            <h3 class="featured-case-title" data-i18n="featuredTitle">Vĩnh Trung Plaza —<br/><em>dự án đã được bổ sung tư liệu thật.</em></h3>
-            <p class="featured-case-desc" data-i18n="featuredDesc">Tôi đã thêm video YouTube “VĨNH TRUNG PLAZA - GIỚI THIỆU”, brochure PDF và các ấn phẩm/visual từ file dự án vào website để phần portfolio thể hiện rõ hơn năng lực Marketing, Design và truyền thông không gian thương mại.</p>
-            <div class="featured-case-actions"><a class="primary-button" href="https://www.youtube.com/watch?v=BUrITTULghs" target="_blank" rel="noreferrer"><span data-i18n="featuredWatch">XEM VIDEO</span><span aria-hidden="true">↗</span></a><a class="text-button" href="assets/vtp-catalogue.pdf" target="_blank" rel="noreferrer"><span data-i18n="featuredBrochure">MỞ BROCHURE</span><span aria-hidden="true">→</span></a></div>
-            <div class="featured-stats"><div><strong>01</strong><span data-i18n="featuredStat1">video YouTube</span></div><div><strong>01</strong><span data-i18n="featuredStat2">brochure PDF</span></div><div><strong>05</strong><span data-i18n="featuredStat3">visual &amp; tư liệu dự án</span></div></div>
-          </div>
-          <div class="featured-case-media">
-            <div class="featured-video-card">
-              <p class="featured-mini-title" data-i18n="featuredEmbedTitle">Video giới thiệu đã nhúng</p>
-              <p class="featured-mini-desc" data-i18n="featuredEmbedDesc">Người xem có thể xem trực tiếp video giới thiệu Vĩnh Trung Plaza ngay trong portfolio mà không cần rời khỏi website.</p>
-              <div class="video-frame"><iframe src="https://www.youtube.com/embed/BUrITTULghs" title="VĨNH TRUNG PLAZA - GIỚI THIỆU" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
-            </div>
-          </div>
-        </div>
-        <div class="featured-gallery reveal">
-          <div class="featured-gallery-head"><p class="section-kicker" data-i18n="featuredGalleryTitle">Tư liệu đã thêm vào website</p><p class="featured-gallery-note" data-i18n="featuredGalleryNote">Bao gồm poster truyền thông, visual tầm view, tiện ích, kết nối và một ảnh thực tế từ file dự án.</p></div>
-          <div class="featured-gallery-grid">
-            <figure class="featured-shot"><img loading="lazy" src="assets/project-vtp-cover.webp" alt="Poster văn phòng cho thuê Vĩnh Trung Plaza" /><figcaption><strong data-i18n="featuredCard1Title">Poster truyền thông</strong><span data-i18n="featuredCard1Desc">Key visual quảng bá văn phòng cho thuê với điểm nhấn diện tích 725 m².</span></figcaption></figure>
-            <figure class="featured-shot"><img loading="lazy" src="assets/project-vtp-view.webp" alt="Visual tầm view Vĩnh Trung Plaza" /><figcaption><strong data-i18n="featuredCard2Title">Visual tầm view</strong><span data-i18n="featuredCard2Desc">Trình bày lợi thế view thành phố · biển · núi của dự án.</span></figcaption></figure>
-            <figure class="featured-shot"><img loading="lazy" src="assets/project-vtp-connect.webp" alt="Visual kết nối của Vĩnh Trung Plaza" /><figcaption><strong data-i18n="featuredCard3Title">Visual kết nối</strong><span data-i18n="featuredCard3Desc">Nhấn mạnh khoảng cách đến ga Đà Nẵng, sân bay quốc tế và biển Mỹ Khê.</span></figcaption></figure>
-            <figure class="featured-shot"><img loading="lazy" src="assets/project-vtp-amenities.webp" alt="Visual tiện ích của Vĩnh Trung Plaza" /><figcaption><strong data-i18n="featuredCard4Title">Visual tiện ích</strong><span data-i18n="featuredCard4Desc">Tổng hợp các tiện ích nổi bật: GO!, Mr. D.I.Y., CGV, Elite Fitness và Pickleball Club.</span></figcaption></figure>
-            <figure class="featured-shot"><img loading="lazy" src="assets/project-vtp-photo.webp" alt="Ảnh thực tế từ dự án Vĩnh Trung Plaza" /><figcaption><strong data-i18n="featuredCard5Title">Tư liệu thực tế</strong><span data-i18n="featuredCard5Desc">Một ảnh thực tế được lấy từ file dự án đã tải lên để bổ sung chiều sâu cho case study.</span></figcaption></figure>
-          </div>
-        </div>
-      </section>
-
-      <!-- CHAPTER 05: final scene -->
-      <section class="contact-section chapter-section section-anchor" id="contact" aria-labelledby="contactTitle">
-        <div class="contact-sky" aria-hidden="true"></div><div class="contact-portal" aria-hidden="true"><span></span><span></span><span></span></div><div class="contact-sparks" aria-hidden="true"></div>
-        <div class="chapter-top reveal"><span>05 — THE NEXT CHAPTER</span><span data-i18n="contactTop">CÂU CHUYỆN TIẾP THEO</span></div>
-        <div class="contact-body reveal"><p class="section-kicker" data-i18n="contactKicker">BẠN ĐÃ ĐẾN CUỐI HÀNH TRÌNH</p><h2 class="contact-title" id="contactTitle" data-i18n="contactTitle">Câu chuyện tiếp theo,<br/><em>chúng ta cùng viết nhé?</em></h2><p data-i18n="contactDescription">Nếu bạn có một ý tưởng cần hiện thực hóa, một dự án cần kể hay hoặc đơn giản là muốn kết nối — hãy bắt đầu bằng một lời chào.</p><a class="primary-button contact-button" href="mailto:Ging.silver@gmail.com?subject=Hello%20Nguyen%20Duc%20Tuyen"><span data-i18n="contactEmail">GỬI LỜI CHÀO</span><span aria-hidden="true">↗</span></a><div class="contact-links"><a href="mailto:Ging.silver@gmail.com">Ging.silver@gmail.com</a><span aria-hidden="true">✦</span><a href="tel:+84983449411">(+84) 983 449 411</a><span aria-hidden="true">✦</span><span>Đà Nẵng, Việt Nam</span></div></div>
-        <div class="contact-character-wrap reveal"><img loading="lazy" src="assets/character-contact.webp" width="1086" height="1448" alt="Nhân vật minh họa Nguyễn Đức Tuyến ở phần liên hệ cuối website" /></div>
-        <div class="contact-bottom"><span data-i18n="contactEnd">HẾT CHƯƠNG 01 — HẸN GẶP LẠI Ở CHƯƠNG TIẾP THEO</span><span>✦</span></div>
-      </section>
-    </main>
-    <footer class="site-footer"><span>© <span id="currentYear">2026</span> NGUYỄN ĐỨC TUYẾN</span><span data-i18n="footerMade">MADE WITH IMAGINATION, DESIGN &amp; A LITTLE MAGIC ✦</span><a href="#top" data-i18n="backTop">LÊN ĐẦU TRANG ↑</a></footer>
-  </div>
-  <noscript><style>.intro{display:none!important}.reveal{opacity:1!important;transform:none!important}.site-shell{visibility:visible!important}</style></noscript>
-  <script src="script.js" defer></script>
+<a class="skip-link" data-i18n="skip" href="#story">Bỏ qua phần giới thiệu</a>
+<div aria-hidden="true" class="scroll-progress" id="scrollProgress"></div>
+<div aria-hidden="true" class="outer-sparkle s1"></div><div aria-hidden="true" class="outer-sparkle s2"></div>
+<div aria-label="Giới thiệu portfolio" aria-modal="true" class="intro" id="intro" role="dialog">
+<div aria-hidden="true" class="intro-orb orb-one"></div><div aria-hidden="true" class="intro-orb orb-two"></div>
+<div class="intro-content">
+<div aria-hidden="true" class="intro-emblem">N<span>✦</span>T</div>
+<p class="eyebrow intro-eyebrow" data-i18n="introEyebrow">MỘT HÀNH TRÌNH SÁNG TẠO</p>
+<h1 class="intro-title" data-i18n="introTitle">Mỗi ý tưởng<br/>là một thế giới.</h1>
+<p class="intro-desc" data-i18n="introDescription">Cùng tôi mở cánh cửa đến thế giới Marketing, Thiết kế &amp; AI.</p>
+<button class="primary-button intro-button" id="startExperience" type="button"><span data-i18n="introStart">KHÁM PHÁ NGAY</span><span aria-hidden="true">↗</span></button>
+<div aria-hidden="true" class="loading-line"><span></span></div>
+<p class="intro-tip" data-i18n="introTip">Không cần chờ — nhấn để bắt đầu</p>
+</div>
+<div class="intro-bottom">NGUYỄN ĐỨC TUYẾN <span>EST. 1995 · DA NANG</span></div>
+</div>
+<div class="site-shell" id="top">
+<header class="site-header" id="siteHeader">
+<a aria-label="Về đầu trang" class="brand" href="#top"><span class="brand-symbol">N<span class="brand-star">✦</span>T</span><span class="brand-sub">CREATIVE<br/>PORTFOLIO</span></a>
+<nav aria-label="Điều hướng chính" class="desktop-nav">
+<a class="nav-link is-active" data-i18n="navHome" href="#story">TRANG CHỦ</a>
+<a class="nav-link" data-i18n="navAbout" href="#about">CÂU CHUYỆN</a>
+<a class="nav-link" data-i18n="navJourney" href="#journey">HÀNH TRÌNH</a>
+<a class="nav-link" data-i18n="navSkills" href="#skills">KỸ NĂNG</a>
+<a class="nav-link" data-i18n="navWork" href="#works">DỰ ÁN</a>
+</nav>
+<div class="nav-actions">
+<button aria-label="Đổi ngôn ngữ" class="lang-toggle" id="langToggle" title="Tiếng Việt / English" type="button"><span id="currentLang">VI</span><span class="lang-divider">/</span><span id="otherLang">EN</span></button>
+<button aria-label="Chuyển chế độ màu" class="theme-button" id="themeToggle" title="Bật / tắt giao diện ban đêm" type="button"><svg fill="none" stroke="currentColor" stroke-width="1.65" viewbox="0 0 24 24"><path d="M20 15.4A8.5 8.5 0 0 1 8.6 4a8.5 8.5 0 1 0 11.4 11.4Z"></path></svg></button>
+<a class="nav-contact" data-i18n="navContact" href="#contact">KẾT NỐI <span aria-hidden="true">↗</span></a>
+<button aria-expanded="false" aria-label="Mở menu" class="menu-toggle" id="menuToggle" type="button"><span></span><span></span></button>
+</div>
+</header>
+<nav aria-label="Điều hướng điện thoại" class="mobile-nav" hidden="" id="mobileNav">
+<a data-i18n="navHome" href="#story">TRANG CHỦ</a><a data-i18n="navAbout" href="#about">CÂU CHUYỆN</a><a data-i18n="navJourney" href="#journey">HÀNH TRÌNH</a><a data-i18n="navSkills" href="#skills">KỸ NĂNG</a><a data-i18n="navWork" href="#works">DỰ ÁN</a><a data-i18n="navContactShort" href="#contact">LIÊN HỆ</a>
+</nav>
+<!-- CHAPTER 00: illustration world / storytelling hero -->
+<main>
+<section aria-labelledby="heroTitle" class="hero section-anchor" id="story">
+<div aria-hidden="true" class="hero-scene" data-parallax=".08"></div>
+<div aria-hidden="true" class="hero-mist"></div>
+<div aria-hidden="true" class="stars stars-hero"></div>
+<div aria-hidden="true" class="float-petals"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="hero-inner">
+<div class="hero-copy">
+<div class="chapter-label"><span class="label-line"></span><span data-i18n="heroChapter">CHƯƠNG 00 / MỞ ĐẦU</span></div>
+<p class="hero-sup" data-i18n="heroHello">XIN CHÀO, TÔI LÀ</p>
+<h2 class="hero-title" id="heroTitle">NGUYỄN <br/><span>ĐỨC TUYẾN.</span></h2>
+<div class="hero-identity" data-i18n="heroRole">MARKETING <span>×</span> CREATIVE DESIGN <span>×</span> AI</div>
+<p class="hero-description" data-i18n="heroDescription">Tôi kết nối chiến lược với hình ảnh, câu chuyện với công nghệ — để mỗi thương hiệu có một dấu ấn riêng.</p>
+<div class="hero-ctas"><a class="primary-button" href="#about"><span data-i18n="heroExplore">BẮT ĐẦU HÀNH TRÌNH</span><span aria-hidden="true">↗</span></a><a class="text-button" href="#works"><span data-i18n="heroView">XEM DỰ ÁN</span><span aria-hidden="true">→</span></a></div>
+</div>
+<div class="hero-character-wrap" data-parallax=".13">
+<div aria-hidden="true" class="character-glow"></div>
+<img alt="Nhân vật minh họa Nguyễn Đức Tuyến ở tư thế chào đón, dẫn dắt phần mở đầu portfolio" class="hero-character" fetchpriority="high" height="1448" src="assets/character-hero.webp" width="1086"/>
+<div class="speech-bubble hero-speech"><span class="bubble-star">✦</span><span data-i18n="heroSpeech">Chào mừng bạn đến với thế giới của tôi!</span></div>
+</div>
+</div>
+<div class="hero-bottom"><span>DA NANG · VIETNAM <span class="dot-sep">◆</span> 2026</span><a aria-label="Cuộn xuống phần câu chuyện" class="scroll-cue" href="#about"><span data-i18n="scroll">CUỘN ĐỂ KHÁM PHÁ</span><span aria-hidden="true" class="scroll-mouse"></span></a><span class="hero-coordinate">16°03′N / 108°12′E</span></div>
+</section>
+<!-- CHAPTER 01: About -->
+<section aria-labelledby="aboutTitle" class="about-section chapter-section section-anchor" id="about">
+<div aria-hidden="true" class="section-noise"></div>
+<div aria-hidden="true" class="section-orb about-orb"></div>
+<div class="chapter-top reveal"><span>01 — THE STORY</span><span data-i18n="aboutKicker">TỪ Ý TƯỞNG ĐẾN DẤU ẤN</span></div>
+<div class="about-layout">
+<div class="about-main reveal">
+<p class="section-kicker" data-i18n="aboutIntro">GẶP GỠ NGƯỜI KỂ CHUYỆN</p>
+<h2 class="section-heading" data-i18n="aboutTitle" id="aboutTitle">Đằng sau mỗi<br/><em>ý tưởng hay</em><br/>là một câu chuyện.</h2>
+<p class="body-large" data-i18n="aboutP1">Tôi là Nguyễn Đức Tuyến, chuyên viên Marketing tại Đà Nẵng. Hành trình của tôi bắt đầu từ dịch vụ, kinh doanh và bất động sản, trước khi tập trung vào xây dựng hình ảnh thương hiệu.</p>
+<p class="body-muted" data-i18n="aboutP2">Tôi yêu việc biến những yêu cầu phức tạp thành trải nghiệm thị giác dễ hiểu: từ thiết kế truyền thông, nhiếp ảnh, concept sự kiện đến thử nghiệm công cụ AI để tối ưu quy trình sáng tạo.</p>
+<div class="about-pills"><span data-i18n="aboutTag1">Tư duy chi tiết</span><span data-i18n="aboutTag2">Đa nhiệm</span><span data-i18n="aboutTag3">Sáng tạo thực tế</span></div>
+</div>
+<div aria-label="Minh họa nhân vật và thế giới sáng tạo" class="about-art reveal">
+<div aria-hidden="true" class="about-art-stars"></div><div aria-hidden="true" class="about-art-ring"></div>
+<img alt="Nhân vật minh họa Nguyễn Đức Tuyến trong phần giới thiệu bản thân" height="1448" loading="lazy" src="assets/character-about.webp" width="1086"/>
+<div class="speech-bubble about-speech"><span class="bubble-star">✦</span><span data-i18n="aboutSpeech">Tôi tin thiết kế đẹp phải đi cùng mục tiêu rõ ràng.</span></div>
+<span class="about-art-corner">NDT / LVL 01</span>
+</div>
+</div>
+<div aria-label="Điểm nổi bật nghề nghiệp" class="metric-grid reveal"><div><span class="metric-value">2017</span><span class="metric-desc" data-i18n="metric1">BẮT ĐẦU SỰ NGHIỆP</span></div><div><span class="metric-value">06</span><span class="metric-desc" data-i18n="metric2">CHẶNG ĐƯỜNG CÔNG TÁC</span></div><div><span class="metric-value">03</span><span class="metric-desc" data-i18n="metric3">MẢNG SÁNG TẠO CỐT LÕI</span></div></div>
+</section>
+<!-- CHAPTER 02: Work experience exactly from CV -->
+<section aria-labelledby="journeyTitle" class="journey-section chapter-section section-anchor" id="journey">
+<div aria-hidden="true" class="journey-horizon"></div>
+<div class="chapter-top reveal"><span>02 — THE JOURNEY</span><span data-i18n="journeyTop">NHỮNG CHẶNG ĐƯỜNG ĐÃ QUA</span></div>
+<div class="journey-heading-wrap reveal"><div><p class="section-kicker" data-i18n="journeyKicker">TỪ DỊCH VỤ ĐẾN SÁNG TẠO</p><h2 class="section-heading" data-i18n="journeyTitle" id="journeyTitle">Mỗi chặng đường,<br/><em>một kỹ năng mới.</em></h2></div><p class="journey-heading-note" data-i18n="journeyNote">Từ nền tảng dịch vụ, kinh doanh đến Marketing và phát triển hình ảnh thương hiệu.</p></div>
+<div aria-label="Nhân vật dẫn dắt hành trình sự nghiệp" class="journey-guide reveal">
+<div class="journey-guide-card">
+<img alt="Nhân vật minh họa Nguyễn Đức Tuyến đang chỉ dẫn các cột mốc sự nghiệp" height="1448" loading="lazy" src="assets/character-journey.webp" width="1086"/>
+<div class="speech-bubble journey-speech"><span class="bubble-star">✦</span><span data-i18n="journeySpeech">Mỗi chặng đường đều góp phần tạo nên kỹ năng hôm nay.</span></div>
+</div>
+</div>
+<div class="timeline">
+<article class="timeline-item reveal"><div class="timeline-year">2017 <span>—</span> 2018</div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase1">CHẶNG 01 · DỊCH VỤ</span><h3>Bà Nà Hills Golf Club</h3><p class="role" data-i18n="job1Role">Marshall · Giám sát sân</p><p data-i18n="job1Desc">Giám sát hoạt động sân, giải quyết vấn đề phát sinh, quản lý công việc tại sân và báo cáo hằng ngày.</p></div></article>
+<article class="timeline-item reveal"><div class="timeline-year">2018 <span>—</span> 2019</div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase2">CHẶNG 02 · CÔNG NGHỆ</span><h3>Polaris Việt Nam</h3><p class="role" data-i18n="job2Role">Sales &amp; Marketing · Hỗ trợ triển khai phần mềm</p><p data-i18n="job2Desc">Tìm kiếm khách hàng, đào tạo người dùng phần mềm và triển khai các chương trình marketing.</p></div></article>
+<article class="timeline-item reveal"><div class="timeline-year">2019 <span>—</span> 01/2023</div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase3">CHẶNG 03 · BẤT ĐỘNG SẢN</span><h3>DKRV Đà Nẵng &amp; BĐS Tâm Phát</h3><p class="role" data-i18n="job3Role">Sales Admin · Trợ lý tổng hợp</p><p data-i18n="job3Desc">Quản trị hợp đồng, chính sách bán hàng, đối chiếu số liệu và phối hợp triển khai marketing đến đội ngũ kinh doanh.</p></div></article>
+<article class="timeline-item reveal"><div class="timeline-year">02/2023 <span>—</span> 11/2023</div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase4">CHẶNG 04 · VẬN HÀNH</span><h3>Minh Trần Holdings</h3><p class="role" data-i18n="job4Role">Trợ lý Kinh doanh</p><p data-i18n="job4Desc">Thiết lập văn phòng mới, tuyển dụng, lập kế hoạch hoạt động phòng Kinh doanh và chăm sóc khách hàng.</p></div></article>
+<article class="timeline-item reveal"><div class="timeline-year">12/2023 <span>—</span> 08/2024</div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase5">CHẶNG 05 · QUẢN TRỊ</span><h3>L.U.X Property Danang</h3><p class="role" data-i18n="job5Role">Trợ lý Ban Giám đốc</p><p data-i18n="job5Desc">Hỗ trợ hợp đồng, quản trị sổ sách, chính sách kinh doanh và phối hợp hoạt động marketing.</p></div></article>
+<article class="timeline-item current reveal"><div class="timeline-year">09/2024 <span>—</span> <span data-i18n="now">NAY</span></div><div aria-hidden="true" class="timeline-point"></div><div class="timeline-copy"><span class="timeline-phase" data-i18n="phase6">CHẶNG 06 · THƯƠNG HIỆU</span><h3 data-i18n="companyDMC">Công ty Cổ phần Đức Mạnh</h3><p class="role" data-i18n="job6Role">Chuyên viên Marketing</p><p data-i18n="job6Desc">Chăm sóc kênh truyền thông, thiết kế hình ảnh thương hiệu, phát triển concept sự kiện, chụp ảnh và hậu kỳ phục vụ truyền thông.</p><span class="current-tag"><span class="pulse-dot"></span><span data-i18n="current">HIỆN TẠI</span></span></div></article>
+</div>
+<div class="education-strip reveal"><span aria-hidden="true" class="education-icon">✦</span><div><span class="education-label" data-i18n="educationLabel">NỀN TẢNG HỌC TẬP</span><strong data-i18n="educationSchool">Cao đẳng Thương mại · 2014–2017</strong><p data-i18n="educationDetail">Quản trị Kinh doanh Dịch vụ &amp; Lữ hành · Hệ chính quy</p></div><span class="education-end">EDUCATION / 01</span></div>
+</section>
+<!-- CHAPTER 03: skills -->
+<section aria-labelledby="skillsTitle" class="skills-section chapter-section section-anchor" id="skills">
+<div aria-hidden="true" class="skill-shape one"></div><div aria-hidden="true" class="skill-shape two"></div>
+<div class="chapter-top reveal"><span>03 — THE TOOLKIT</span><span data-i18n="skillsTop">KỸ NĂNG &amp; CÔNG CỤ</span></div>
+<div class="reveal"><p class="section-kicker" data-i18n="skillsKicker">CREATIVE TOOLKIT</p><h2 class="section-heading" data-i18n="skillsTitle" id="skillsTitle">Ý tưởng là điểm bắt đầu.<br/><em>Công cụ giúp hiện thực hóa.</em></h2><p class="skills-lead" data-i18n="skillsLead">Kết hợp nền tảng marketing, thiết kế nội dung và các công cụ sáng tạo mới. Chọn từng nhóm để khám phá.</p></div>
+<div aria-label="Nhóm kỹ năng" class="skill-tabs reveal" role="tablist">
+<button aria-controls="skill-panel" aria-selected="true" class="skill-tab is-active" data-skill="creative" id="tab-creative" role="tab"><span aria-hidden="true">✦</span> <span data-i18n="tabCreative">THIẾT KẾ &amp; MEDIA</span></button>
+<button aria-controls="skill-panel" aria-selected="false" class="skill-tab" data-skill="ai" id="tab-ai" role="tab"><span aria-hidden="true">◇</span> <span data-i18n="tabAI">AI &amp; CÔNG NGHỆ</span></button>
+<button aria-controls="skill-panel" aria-selected="false" class="skill-tab" data-skill="strategy" id="tab-strategy" role="tab"><span aria-hidden="true">◎</span> <span data-i18n="tabBusiness">MARKETING &amp; VẬN HÀNH</span></button>
+</div>
+<div aria-labelledby="tab-creative" class="skills-stage reveal" id="skill-panel" role="tabpanel">
+<div class="skills-stage-art"><div aria-hidden="true" class="skills-crystal"><div class="crystal-core">✦</div><div class="crystal-ring ring-1"></div><div class="crystal-ring ring-2"></div></div><div class="skills-art-tag">NDT / TOOLBOX</div><img alt="Nhân vật minh họa Nguyễn Đức Tuyến trong phần kỹ năng và công cụ" class="skills-character" height="1448" loading="lazy" src="assets/character-skills.webp" width="1086"/></div>
+<div class="skills-stage-copy"><span class="skills-stage-label" id="skillNumber">01 / CREATIVE</span><h3 id="skillHeading">Design &amp; Visual Storytelling</h3><p id="skillDescription">Từ ý tưởng đến hình ảnh truyền thông, video và trải nghiệm thương hiệu.</p><div class="tool-chips" id="skillChips"><span>Adobe Illustrator</span><span>Adobe Premiere Pro</span><span>Adobe After Effects</span><span>Adobe Photoshop</span><span>Photography</span><span>Visual Concept</span></div><div class="skills-footnote" id="skillFootnote">Thiết kế đồ họa · Hậu kỳ ảnh/video · Concept sáng tạo</div></div>
+</div>
+</section>
+<!-- CHAPTER 04: portfolio domains, illustrative artwork not fabricated outcomes -->
+<section aria-labelledby="worksTitle" class="works-section chapter-section section-anchor" id="works">
+<div class="chapter-top reveal"><span>04 — SELECTED WORLDS</span><span data-i18n="worksTop">THIẾT KẾ &amp; TRUYỀN THÔNG</span></div>
+<div class="works-heading reveal"><div><p class="section-kicker" data-i18n="worksKicker">SELECTED WORK / PORTFOLIO</p><h2 class="section-heading" data-i18n="worksTitle" id="worksTitle">Dự án <em>tiêu biểu.</em></h2></div><p data-i18n="worksNote">Thiết kế, truyền thông và nội dung đa phương tiện cho bất động sản thương mại.</p></div>
+<div class="project-grid">
+<article class="project-card reveal" tabindex="0"><div class="project-cover"><img alt="Poster truyền thông văn phòng cho thuê Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-cover.webp"/><span class="project-id">PROJECT / 01</span><span aria-hidden="true" class="project-symbol">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work1Type">OFFICE LEASING · KEY VISUAL</span><h3 data-i18n="work1Title">Văn phòng cho thuê</h3><p data-i18n="work1Desc">Hình ảnh quảng bá không gian văn phòng và lợi thế tầm nhìn tại Vĩnh Trung Plaza.</p><div class="project-tags"><span data-i18n="tagDesign">Thiết kế</span><span>Marketing</span></div></div></article>
+<article class="project-card reveal" tabindex="0"><div class="project-cover"><img alt="Visual lợi thế kết nối giao thông của Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-connect.webp"/><span class="project-id">PROJECT / 02</span><span aria-hidden="true" class="project-symbol">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work2Type">LOCATION · CONNECTIVITY</span><h3 data-i18n="work2Title">Kết nối thuận tiện</h3><p data-i18n="work2Desc">Truyền tải lợi thế kết nối sân bay, nhà ga và biển Mỹ Khê bằng thiết kế trực quan.</p><div class="project-tags"><span>Location</span><span>Strategy</span></div></div></article>
+<article class="project-card reveal" tabindex="0"><div class="project-cover"><img alt="Visual hệ tiện ích nội khu tại Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-amenities.webp"/><span class="project-id">PROJECT / 03</span><span aria-hidden="true" class="project-symbol">↗</span></div><div class="project-text"><span class="project-type" data-i18n="work3Type">FACILITIES · LIFESTYLE</span><h3 data-i18n="work3Title">Tiện ích nổi bật</h3><p data-i18n="work3Desc">Giới thiệu hệ tiện ích mua sắm, giải trí và thể thao trong cùng tòa nhà.</p><div class="project-tags"><span>Branding</span><span>Content</span></div></div></article>
+</div>
+<div class="featured-case reveal">
+<div class="featured-case-copy">
+<p class="section-kicker" data-i18n="featuredKicker">BRAND COMMUNICATION</p>
+<h3 class="featured-case-title" data-i18n="featuredTitle">Vĩnh Trung <em>Plaza.</em></h3>
+<p class="featured-case-desc" data-i18n="featuredDesc">Truyền thông hình ảnh cho không gian văn phòng, thương mại và hệ tiện ích tại trung tâm Đà Nẵng.</p>
+<div class="featured-case-actions"><a class="primary-button" href="https://www.youtube.com/watch?v=BUrITTULghs" rel="noreferrer" target="_blank"><span data-i18n="featuredWatch">XEM VIDEO</span><span aria-hidden="true">↗</span></a><a class="text-button" href="assets/vtp-catalogue.pdf" rel="noreferrer" target="_blank"><span data-i18n="featuredBrochure">BROCHURE</span><span aria-hidden="true">→</span></a></div>
+</div>
+<div class="featured-case-media">
+<div class="featured-video-card">
+<p class="featured-mini-title" data-i18n="featuredEmbedTitle">PHIM GIỚI THIỆU DỰ ÁN</p>
+<div class="video-frame"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/BUrITTULghs" title="VĨNH TRUNG PLAZA - GIỚI THIỆU"></iframe></div>
+</div>
+</div>
+</div>
+<div class="featured-gallery reveal">
+<div class="featured-gallery-head"><p class="section-kicker" data-i18n="featuredGalleryTitle">THIẾT KẾ &amp; NHIẾP ẢNH</p><p class="featured-gallery-note" data-i18n="featuredGalleryNote">Các góc nhìn về không gian, vị trí và tiện ích Vĩnh Trung Plaza.</p></div>
+<div class="featured-gallery-grid">
+<figure class="featured-shot"><img alt="Poster văn phòng cho thuê Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-cover.webp"/><figcaption><strong data-i18n="featuredCard1Title">Văn phòng cho thuê</strong><span data-i18n="featuredCard1Desc">Visual diện tích 725 m².</span></figcaption></figure>
+<figure class="featured-shot"><img alt="Visual tầm view Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-view.webp"/><figcaption><strong data-i18n="featuredCard2Title">Tầm nhìn toàn cảnh</strong><span data-i18n="featuredCard2Desc">Thành phố, biển và núi.</span></figcaption></figure>
+<figure class="featured-shot"><img alt="Visual kết nối của Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-connect.webp"/><figcaption><strong data-i18n="featuredCard3Title">Kết nối đô thị</strong><span data-i18n="featuredCard3Desc">Ga, sân bay, biển Mỹ Khê.</span></figcaption></figure>
+<figure class="featured-shot"><img alt="Visual tiện ích của Vĩnh Trung Plaza" loading="lazy" src="assets/project-vtp-amenities.webp"/><figcaption><strong data-i18n="featuredCard4Title">Tiện ích nội khu</strong><span data-i18n="featuredCard4Desc">Mua sắm, giải trí, thể thao.</span></figcaption></figure>
+<figure class="featured-shot"><img alt="Ảnh chụp Vĩnh Trung Pickleball Club" loading="lazy" src="assets/project-vtp-photo.webp"/><figcaption><strong data-i18n="featuredCard5Title">Nhiếp ảnh Pickleball</strong><span data-i18n="featuredCard5Desc">Vĩnh Trung Pickleball Club.</span></figcaption></figure>
+</div>
+</div>
+</section>
+<!-- CHAPTER 05: final scene -->
+<section aria-labelledby="contactTitle" class="contact-section chapter-section section-anchor" id="contact">
+<div aria-hidden="true" class="contact-sky"></div><div aria-hidden="true" class="contact-portal"><span></span><span></span><span></span></div><div aria-hidden="true" class="contact-sparks"></div>
+<div class="chapter-top reveal"><span>05 — THE NEXT CHAPTER</span><span data-i18n="contactTop">CÂU CHUYỆN TIẾP THEO</span></div>
+<div class="contact-body reveal"><p class="section-kicker" data-i18n="contactKicker">BẠN ĐÃ ĐẾN CUỐI HÀNH TRÌNH</p><h2 class="contact-title" data-i18n="contactTitle" id="contactTitle">Câu chuyện tiếp theo,<br/><em>chúng ta cùng viết nhé?</em></h2><p data-i18n="contactDescription">Nếu bạn có một ý tưởng cần hiện thực hóa, một dự án cần kể hay hoặc đơn giản là muốn kết nối — hãy bắt đầu bằng một lời chào.</p><a class="primary-button contact-button" href="mailto:Ging.silver@gmail.com?subject=Hello%20Nguyen%20Duc%20Tuyen"><span data-i18n="contactEmail">GỬI LỜI CHÀO</span><span aria-hidden="true">↗</span></a><div class="contact-links"><a href="mailto:Ging.silver@gmail.com">Ging.silver@gmail.com</a><span aria-hidden="true">✦</span><a href="tel:+84983449411">(+84) 983 449 411</a><span aria-hidden="true">✦</span><span>Đà Nẵng, Việt Nam</span></div></div>
+<div class="contact-character-wrap reveal"><img alt="Nhân vật minh họa Nguyễn Đức Tuyến ở phần liên hệ cuối website" height="1448" loading="lazy" src="assets/character-contact.webp" width="1086"/></div>
+<div class="contact-bottom"><span data-i18n="contactEnd">CẢM ƠN ĐÃ GHÉ THĂM · HẸN GẶP LẠI</span><span>✦</span></div>
+</section>
+</main>
+<footer class="site-footer"><span>© <span id="currentYear">2026</span> NGUYỄN ĐỨC TUYẾN</span><span data-i18n="footerMade">MADE WITH IMAGINATION, DESIGN &amp; A LITTLE MAGIC ✦</span><a data-i18n="backTop" href="#top">LÊN ĐẦU TRANG ↑</a></footer>
+</div>
+<noscript><style>.intro{display:none!important}.reveal{opacity:1!important;transform:none!important}.site-shell{visibility:visible!important}</style></noscript>
+<script defer="" src="script.js"></script>
 </body>
 </html>
